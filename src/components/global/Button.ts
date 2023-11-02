@@ -1,6 +1,6 @@
 import {css, html} from "lit";
 import {customElement, property} from "lit/decorators.js";
-import {textColor, whiteColor} from "../statics";
+import {textColor} from "../statics";
 import {Component} from "../Component.ts";
 
 @customElement("simple-button")
@@ -19,7 +19,7 @@ export class SimpleButton extends Component {
       a {
         ${textColor};
         text-decoration: none;
-        outline: ${whiteColor} solid 3px;
+        outline: var(--color-light) solid 3px;
         padding: 0.5em;
         transition: .3s;
         text-transform: uppercase;

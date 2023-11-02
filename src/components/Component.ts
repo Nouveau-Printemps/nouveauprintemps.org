@@ -1,5 +1,5 @@
 import {CSSResultGroup, LitElement, css} from "lit";
-import {whiteColor} from "./statics.ts";
+import {textColor} from "./statics.ts";
 
 export abstract class Component extends LitElement {
     private static _styles: CSSResultGroup;
@@ -134,9 +134,13 @@ const globalCSS = css`
     font-style: italic;
     src: url("/fonts/raleway/Raleway-BlackItalic.ttf") format("truetype");
   }
+  * {
+    --color-light: #e7e7e7;
+    --color-dark: #0a0611;
+  }
   body {
     font-family: 'Lato', sans-serif;
-    ${whiteColor};
+    ${textColor};
     font-size: 16px;
   }
   a {

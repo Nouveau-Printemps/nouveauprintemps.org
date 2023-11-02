@@ -14,12 +14,11 @@ export class RootDemands extends Component {
         display: flex;
         gap: 50%;
         flex-direction: column;
-        padding-top: 20%;
       }
       
-      * {
-        margin-bottom: 20%;
-      }
+      simple-button {
+        padding-bottom: 10%;
+      }      
     `
     render() {
         return html`
@@ -45,38 +44,48 @@ class Demand extends Component {
     @property({type: Boolean})
     left? = false
     @property({type: String})
-    src? = ""
+    src = ""
     @property({type: String})
-    alt? = ""
+    alt = ""
+    @property({type: String})
+    color = ""
 
     static styles = css`
-      :host {
+      div {
         display: flex;
         align-items: center;
-        margin: 0 10%;
+        padding: 10%;
         gap: 64px;
+        background: var(--color-dark);
+      }
+      .light {
+        background: var(--color-light);
       }
       p {
         font-size: 52px;
         font-weight: bold;
         ${textColor};
       }
-      //img {
-      //  width: 400px;
-      //}
+      .light p {
+        color: var(--color-dark);
+      }
     `
 
     render() {
         const content = this.innerHTML.trim()
         if (this.left) {
             return html`
-                <p>${content}</p>
-                <img src="${this.src}" alt="${this.alt}">
+                <div class="light">
+                    <p>${content}</p>
+                    <img src="${this.src}" alt="${this.alt}">
+                </div>
             `
         }
         return html`
-            <img src="${this.src}" alt="${this.alt}">
-            <p>${content}</p>
+            <div>
+                <img src="${this.src}" alt="${this.alt}">
+                <p>${content}</p>
+            </div>
         `
     }
 }

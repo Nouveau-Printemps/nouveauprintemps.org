@@ -116,7 +116,7 @@ class ScrollDown extends Component {
     private _scroll() {
         window.scroll({
             behavior: "smooth",
-            top: window.innerHeight+(1/6)*window.innerHeight
+            top: window.innerHeight+(1/10)*window.innerHeight
         })
     }
 }
