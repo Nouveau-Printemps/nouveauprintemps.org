@@ -19,6 +19,121 @@ export abstract class Component extends LitElement {
 }
 
 const globalCSS = css`
+  @font-face {
+    font-family: 'Abril';
+    font-weight: 400;
+    src: url("/fonts/abril/AbrilFatface-Regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-weight: 100;
+    src: url("/fonts/lato/Lato-Thin.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-weight: 100;
+    font-style: italic;
+    src: url("/fonts/lato/Lato-ThinItalic.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-weight: 300;
+    src: url("/fonts/lato/Lato-Light.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-weight: 300;
+    font-style: italic;
+    src: url("/fonts/lato/Lato-LightItalic.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-weight: 400;
+    src: url("/fonts/lato/Lato-Regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-style: italic;
+    src: url("/fonts/lato/Lato-Italic.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-weight: 700;
+    src: url("/fonts/lato/Lato-Bold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-weight: 700;
+    font-style: italic;
+    src: url("/fonts/lato/Lato-BoldItalic.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-weight: 900;
+    src: url("/fonts/lato/Lato-Black.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-weight: 900;
+    font-style: italic;
+    src: url("/fonts/lato/Lato-BlackItalic.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Raleway';
+    font-weight: 100;
+    src: url("/fonts/raleway/Raleway-Thin.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Raleway';
+    font-weight: 100;
+    font-style: italic;
+    src: url("/fonts/raleway/Raleway-ThinItalic.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Raleway';
+    font-weight: 300;
+    font-style: italic;
+    src: url("/fonts/raleway/Raleway-LightItalic.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Raleway';
+    font-weight: 300;
+    src: url("/fonts/raleway/Raleway-Light.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Raleway';
+    font-weight: 400;
+    src: url("/fonts/raleway/Raleway-Regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-style: italic;
+    src: url("/fonts/raleway/Raleway-Italic.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-style: italic;
+    src: url("/fonts/raleway/Raleway-BoldItalic.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Raleway';
+    font-weight: 700;
+    src: url("/fonts/raleway/Raleway-Bold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Raleway';
+    font-weight: 900;
+    src: url("/fonts/raleway/Raleway-Black.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Raleway';
+    font-weight: 900;
+    font-style: italic;
+    src: url("/fonts/raleway/Raleway-BlackItalic.ttf") format("truetype");
+  }
   body {
     font-family: 'Lato', sans-serif;
     ${whiteColor};
