@@ -9,7 +9,7 @@ import {Component} from "../Component.ts";
 export class RootDemands extends Component {
     static styles = css`
       :host {
-        background: #0a0611;
+        background: var(--color-dark);
         width: 100%;
         display: flex;
         gap: 50%;
@@ -59,7 +59,7 @@ class Demand extends Component {
         background: var(--color-dark);
       }
       .light {
-        background: var(--color-light);
+        background: var(--color-green);
       }
       p {
         font-size: 52px;

@@ -134,28 +134,36 @@ const globalCSS = css`
     font-style: italic;
     src: url("/fonts/raleway/Raleway-BlackItalic.ttf") format("truetype");
   }
+
   * {
-    --color-light: #e7e7e7;
-    --color-dark: #0a0611;
+    --color-light: rgba(255, 255, 255, 0.8);
+    --color-green: #c2e1c1;
+    --color-dark: #242333;
   }
+
   body {
     font-family: 'Lato', sans-serif;
     ${textColor};
     font-size: 16px;
   }
+
   a {
     font-family: 'Lato', sans-serif;
   }
+
   h1, h2, h3 {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
   }
+
   h1 {
     font-size: 3em;
   }
+
   h2 {
     font-size: 2.5em;
   }
+
   h3 {
     font-size: 2em;
   }
