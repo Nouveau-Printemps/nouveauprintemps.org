@@ -1,9 +1,10 @@
 import { customElement } from "lit/decorators.js";
-import {css, html, LitElement} from "lit";
+import {css, html} from "lit";
 import {textColor} from "../statics.ts";
+import {Component} from "../Component.ts";
 
 @customElement('r-navbar')
-export class RootNavbar extends LitElement {
+export class RootNavbar extends Component {
     // Define scoped styles right with your component, in plain CSS
     static styles = css`
       :host {

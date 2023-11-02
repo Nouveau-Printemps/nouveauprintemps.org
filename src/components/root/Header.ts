@@ -1,11 +1,12 @@
 import { customElement } from "lit/decorators.js";
-import {css, CSSResultGroup, html, LitElement} from "lit";
+import {css, CSSResultGroup, html} from "lit";
 
 import './Navbar.ts'
 import { textColor } from "../statics.ts";
+import {Component} from "../Component.ts";
 
 @customElement('r-header')
-export class RootHeader extends LitElement {
+export class RootHeader extends Component {
     // Define scoped styles right with your component, in plain CSS
     static styles = css`
       :host {
@@ -29,7 +30,6 @@ export class RootHeader extends LitElement {
         bottom: 15%;
       }
       h1 {
-        font-size: 2.5em;
         ${textColor};
         text-transform: uppercase;
         margin: 0 0 16px 0;
@@ -96,7 +96,7 @@ export class RootHeader extends LitElement {
 
 @customElement("scroll-down")
 // @ts-ignore
-class ScrollDown extends LitElement {
+class ScrollDown extends Component {
     static styles = css`
       img {
         position: absolute;

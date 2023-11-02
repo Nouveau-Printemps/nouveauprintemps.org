@@ -1,11 +1,12 @@
-import {css, html, LitElement} from "lit";
+import {css, html} from "lit";
 import {customElement, property} from "lit/decorators.js";
 
 import '../global/Button.ts'
 import { textColor } from "../statics.ts";
+import {Component} from "../Component.ts";
 
 @customElement("r-demands")
-export class RootDemands extends LitElement {
+export class RootDemands extends Component {
     static styles = css`
       :host {
         background: #0a0611;
@@ -22,13 +23,13 @@ export class RootDemands extends LitElement {
     `
     render() {
         return html`
-            <r-demand src="https://via.placeholder.com/300x400" alt="Temp">
+            <r-demand src="https://placehold.co/300x300" alt="Temp">
                 Remettre en place une véritable démocratie en France
             </r-demand>
-            <r-demand src="https://via.placeholder.com/300x400" alt="Temp" left="true">
+            <r-demand src="https://placehold.co/300x300" alt="Temp" left="true">
                 Lutter activement contre le changement climatique et contre l'exploitation des ressources
             </r-demand>
-            <r-demand src="https://via.placeholder.com/300x400" alt="Temp">
+            <r-demand src="https://placehold.co/300x300" alt="Temp">
                 Remettre le citoyen au centre des politiques et des actions
             </r-demand>
             <simple-button href="/">Lire la version longue</simple-button>
@@ -40,7 +41,7 @@ export class RootDemands extends LitElement {
 
 @customElement("r-demand")
 // @ts-ignore
-class Demand extends LitElement {
+class Demand extends Component {
     @property({type: Boolean})
     left? = false
     @property({type: String})
@@ -60,6 +61,9 @@ class Demand extends LitElement {
         font-weight: bold;
         ${textColor};
       }
+      //img {
+      //  width: 400px;
+      //}
     `
 
     render() {

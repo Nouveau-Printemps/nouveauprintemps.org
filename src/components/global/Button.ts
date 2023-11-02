@@ -1,9 +1,10 @@
-import {LitElement, css, html} from "lit";
+import {css, html} from "lit";
 import {customElement, property} from "lit/decorators.js";
 import {textColor, whiteColor} from "../statics";
+import {Component} from "../Component.ts";
 
 @customElement("simple-button")
-export class SimpleButton extends LitElement {
+export class SimpleButton extends Component {
     static styles = css`
       :host {
         width: 100%;
