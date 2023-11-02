@@ -6,7 +6,7 @@ export class RootHeader extends LitElement {
     // Define scoped styles right with your component, in plain CSS
     static styles = css`
     :host {
-      color: blue;
+      
     }
   `;
 
@@ -16,7 +16,11 @@ export class RootHeader extends LitElement {
 
     // Render the UI as a function of component state
     render() {
-        return html`<p>Hello, ${this.name}!</p>`;
+        return html`
+            <header class="w-full h-full bg-black">
+                
+            </header>
+        `;
     }
 }
 
