@@ -1,5 +1,6 @@
 import { customElement } from "lit/decorators.js";
 import {css, html, LitElement} from "lit";
+import {textColor} from "../statics.ts";
 
 @customElement('r-navbar')
 export class RootNavbar extends LitElement {
@@ -9,8 +10,9 @@ export class RootNavbar extends LitElement {
         font-size: 24px;
         display: flex;
         width: 100%;
-        color: white;
+        ${textColor};
         text-transform: uppercase;
+        align-items: center;
       }
       nav {
         margin: 0 16px 0 auto;
@@ -23,7 +25,7 @@ export class RootNavbar extends LitElement {
       }
       a {
         text-decoration: none;
-        color: white;
+        ${textColor};
       }
       p {
         padding-top: 16px;
