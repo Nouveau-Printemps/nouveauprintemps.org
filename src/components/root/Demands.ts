@@ -2,7 +2,7 @@ import {css, html} from "lit";
 import {customElement, property} from "lit/decorators.js";
 
 import '../global/Button.ts'
-import { textColor } from "../statics.ts";
+import {shadowImg, textColor} from "../statics.ts";
 import {Component} from "../Component.ts";
 
 @customElement("r-demands")
@@ -58,16 +58,22 @@ class Demand extends Component {
         gap: 64px;
         background: var(--color-dark);
       }
+
       .light {
         background: var(--color-green);
       }
+
       p {
         font-size: 52px;
         font-weight: bold;
         ${textColor};
       }
+
       .light p {
         color: var(--color-dark);
+      }
+      img {
+        ${shadowImg};
       }
     `
 

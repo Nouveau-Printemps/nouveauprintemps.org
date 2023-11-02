@@ -8,7 +8,7 @@ export class SimpleButton extends Component {
     static styles = css`
       :host {
         width: 100%;
-        --delay: .85s
+        --delay: 1s
       }
 
       div {

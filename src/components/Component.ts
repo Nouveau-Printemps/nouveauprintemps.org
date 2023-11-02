@@ -144,7 +144,10 @@ const globalCSS = css`
   body {
     font-family: 'Lato', sans-serif;
     ${textColor};
-    font-size: 16px;
+  }
+  
+  p {
+    font-size: 1.2em;
   }
 
   a {
