@@ -4,6 +4,8 @@ import {css, html} from "lit";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import {shadowImg} from "../statics.ts";
 
+import '../global/Button.ts'
+
 @customElement("r-about")
 export class RootAbout extends Component {
     static styles = css`
@@ -22,6 +24,7 @@ export class RootAbout extends Component {
         align-items: center;
         align-content: center;
         justify-content: center;
+        margin-bottom: 10%;
       }
       p {
         font-size: 1.65em;
@@ -44,6 +47,7 @@ export class RootAbout extends Component {
                 <p>${unsafeHTML(content)}</p>
                 <img src="${this.src}" alt="${this.alt}">
             </div>
+            <simple-button href="/" light="true">Nous rejoindre</simple-button>
         `
     }
 }

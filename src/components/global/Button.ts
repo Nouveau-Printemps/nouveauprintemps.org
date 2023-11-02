@@ -30,12 +30,21 @@ export class SimpleButton extends Component {
         transition: .3s;
         transition-delay: var(--delay);
       }
+      
+      .light a {
+        outline: var(--color-dark) solid 3px;
+        color: var(--color-dark);
+      }
 
       a:hover {
         color: var(--color-dark);
         transition: .3s;
         transition-delay: var(--delay);
       }
+      .light a:hover {
+        ${textColor};
+      }
+      
       span {
         position: absolute;
         display: block;
@@ -47,6 +56,9 @@ export class SimpleButton extends Component {
         background: var(--color-light);
         animation: off 1s ease-in-out;
         animation-fill-mode: forwards;
+      }
+      .light span {
+        background: var(--color-dark);
       }
       a:hover span {
         animation: on 1s ease-in-out;
@@ -76,10 +88,13 @@ export class SimpleButton extends Component {
     @property({type: String})
     href = ""
 
+    @property({type: Boolean})
+    light = false
+
     render() {
         const content = this.innerHTML
         return html`
-            <div>
+            <div class=${this.light ? "light" : ""}>
                 <a href="${this.href}">
                     ${content}
                     <span></span>
