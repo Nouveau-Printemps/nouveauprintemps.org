@@ -1,7 +1,7 @@
 import { customElement } from "lit/decorators.js";
 import {css, CSSResultGroup, html} from "lit";
 
-import './Navbar.ts'
+import '../global/Navbar.ts'
 import { textColor } from "../statics.ts";
 import {Component} from "../Component.ts";
 
@@ -45,7 +45,7 @@ export class RootHeader extends Component {
         ${RootHeader.video()};
         ${RootHeader.place()}
       }
-      r-navbar {
+      g-navbar {
         z-index: 2;
         position: relative;
       }
@@ -74,7 +74,7 @@ export class RootHeader extends Component {
     render() {
         return html`
             <header>
-                <r-navbar></r-navbar>
+                <g-navbar></g-navbar>
                 <div class="container">
                     <video autoplay muted loop>
                         <source src="/videos/placeholder.mp4">

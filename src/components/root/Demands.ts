@@ -68,6 +68,9 @@ class Demand extends Component {
         font-weight: bold;
         ${textColor};
       }
+      .right p {
+        text-align: right;
+      }
 
       .light p {
         color: var(--color-dark);
@@ -88,7 +91,7 @@ class Demand extends Component {
             `
         }
         return html`
-            <div>
+            <div class="right">
                 <img src="${this.src}" alt="${this.alt}">
                 <p>${content}</p>
             </div>

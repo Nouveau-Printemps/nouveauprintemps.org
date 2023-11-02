@@ -3,8 +3,8 @@ import {css, html} from "lit";
 import {textColor} from "../statics.ts";
 import {Component} from "../Component.ts";
 
-@customElement('r-navbar')
-export class RootNavbar extends Component {
+@customElement('g-navbar')
+export class GlobalNavbar extends Component {
     // Define scoped styles right with your component, in plain CSS
     static styles = css`
       :host {
@@ -22,13 +22,14 @@ export class RootNavbar extends Component {
         gap: 32px;
         width: 50%;
         text-align: center;
-        flex-direction: row-reverse;
+        flex-direction: row;
+        justify-content: right;
       }
       a {
         text-decoration: none;
         ${textColor};
       }
-      p {
+      img {
         padding-top: 16px;
         margin: 0 0 0 16px;
       }
@@ -37,10 +38,11 @@ export class RootNavbar extends Component {
     // Render the UI as a function of component state
     render() {
         return html`
-            <p>Nouveau Printemps</p>
+            <img src="https://placehold.co/150x50" alt="Logo">
             <nav>
                 <a href="/">Accueil</a>
-                <a href="/">Accueil</a>
+                <a href="/">Blog</a>
+                <a href="/">Réseaux</a>
             </nav>
         `;
     }
@@ -48,6 +50,6 @@ export class RootNavbar extends Component {
 
 declare global {
     interface HTMLElementRootNavbar {
-        "r-navbar": RootNavbar;
+        "r-navbar": GlobalNavbar;
     }
 }
