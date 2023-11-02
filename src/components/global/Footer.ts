@@ -33,8 +33,8 @@ export class Footer extends Component {
         <img src="https://placehold.co/250x100" alt="Logo">
         <div class="list">
             <a href="/">Accueil</a>
-            <a href="/">Blog</a>
-            <a href="/">Réseaux</a>
+            <a href="https://blog." target="_blank" ">Blog</a>
+            <a href="/reseaux">Réseaux</a>
         </div>
         <p>
             &copy; 2023 - Nouveau Printemps<br>

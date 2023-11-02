@@ -20,7 +20,7 @@ export class GlobalNavbar extends Component {
         padding-top: 16px;
         display: flex;
         gap: 32px;
-        width: 50%;
+        width: 70%;
         text-align: center;
         flex-direction: row;
         justify-content: right;
@@ -41,8 +41,8 @@ export class GlobalNavbar extends Component {
             <img src="https://placehold.co/150x50" alt="Logo">
             <nav>
                 <a href="/">Accueil</a>
-                <a href="/">Blog</a>
-                <a href="/">Réseaux</a>
+                <a href="/nos-revendications">Nos Revendications</a>
+                <a href="/nous-rejoindre">Nous Rejoindre</a>
             </nav>
         `;
     }
