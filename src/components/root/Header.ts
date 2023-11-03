@@ -81,12 +81,12 @@ export class RootHeader extends Component {
                     </video>
                 </div>
                 <div class="content">
-                    <div class="text">
-                        <h1>Nouveau Printemps</h1>
-                        <p>
-                            Une organisation qui souhaite changer le monde.
-                        </p>
-                    </div>
+<!--                    <div class="text">-->
+<!--                        <h1>Nouveau Printemps</h1>-->
+<!--                        <p>-->
+<!--                            Une organisation qui souhaite changer le monde.-->
+<!--                        </p>-->
+<!--                    </div>-->
                     <scroll-down></scroll-down>
                 </div>
             </header>
@@ -101,7 +101,7 @@ class ScrollDown extends Component {
       img {
         position: absolute;
         z-index: 2;
-        right: 32px;
+        right: 10%;
         width: 64px;
         bottom: 15%;
       }

@@ -16,7 +16,7 @@ export class GlobalNavbar extends Component {
         align-items: center;
       }
       nav {
-        margin: 0 16px 0 auto;
+        margin: 0 10% 0 auto;
         padding-top: 16px;
         display: flex;
         gap: 32px;
@@ -31,7 +31,7 @@ export class GlobalNavbar extends Component {
       }
       img {
         padding-top: 16px;
-        margin: 0 0 0 16px;
+        margin: 0 0 0 10%;
       }
   `;
 
