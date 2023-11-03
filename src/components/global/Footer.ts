@@ -27,6 +27,9 @@ export class Footer extends Component {
         color: var(--color-dark);
         font-size: 1.25em;
       }
+      p {
+        font-size: 1.2em;
+      }
     `
     render() {
         return html`
