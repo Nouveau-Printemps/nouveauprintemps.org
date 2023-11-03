@@ -114,6 +114,17 @@ const globalCSS = css`
   }
   @font-face {
     font-family: 'Raleway';
+    font-weight: 600;
+    src: url("/fonts/raleway/Raleway-SemiBold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-style: italic;
+    src: url("/fonts/raleway/Raleway-SemiBoldItalic.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Raleway';
     font-weight: 700;
     font-style: italic;
     src: url("/fonts/raleway/Raleway-BoldItalic.ttf") format("truetype");

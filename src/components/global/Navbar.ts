@@ -14,10 +14,10 @@ export class GlobalNavbar extends Component {
         ${textColor};
         text-transform: uppercase;
         align-items: center;
+        padding: 16px 0;
       }
       nav {
         margin: 0 10% 0 auto;
-        padding-top: 16px;
         display: flex;
         gap: 32px;
         width: 70%;
@@ -30,7 +30,6 @@ export class GlobalNavbar extends Component {
         ${textColor};
       }
       img {
-        padding-top: 16px;
         margin: 0 0 0 10%;
       }
   `;
