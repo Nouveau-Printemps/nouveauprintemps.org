@@ -26,7 +26,7 @@ export class RootDemands extends Component {
                 Mettre en place une démocratie novatrice et respectueuse
             </r-demand>
             <r-demand src="https://placehold.co/300x300" alt="Temp" left="true">
-                Lutter efficacement contre le changement climatique
+                Lutter contre le changement climatique
             </r-demand>
             <r-demand src="https://placehold.co/300x300" alt="Temp">
                 Remettre le citoyen au centre des politiques et actions

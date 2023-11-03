@@ -17,6 +17,12 @@ export class GlobalParagraph extends Component {
       .dark {
         color: var(--color-light);
       }
+      a {
+        color: var(--color-dark);
+      }
+      .dark a {
+        color: var(--color-light);
+      }
     `
 
     @property({type: String})

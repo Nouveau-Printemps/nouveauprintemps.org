@@ -158,7 +158,12 @@ const globalCSS = css`
   }
   
   p {
+    font-family: 'Lato', sans-serif;
     font-size: 1.5em;
+  }
+  
+  .italic {
+    font-style: italic;
   }
 
   a {

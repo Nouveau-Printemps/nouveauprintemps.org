@@ -1,6 +1,6 @@
 import {Component} from "../Component.ts";
 import {css, html} from "lit";
-import {customElement} from "lit/decorators.js";
+import {customElement, property} from "lit/decorators.js";
 
 import "../global/Navbar.ts"
 
@@ -10,23 +10,46 @@ export class GlobalHeader extends Component {
       g-navbar {
         background: var(--color-dark);
       }
-      .container {
-        background: var(--color-green) url("https://placehold.co/1920x600") center no-repeat;
-        padding: 10%;
+    `
+
+    @property({type: String})
+    image = "https://placehold.co/1920x600"
+    @property({type: String})
+    title = ""
+
+    render() {
+        return html`
+            <header>
+                <g-navbar></g-navbar>
+                <head-container image=${this.image} title=${this.title}></head-container>
+            </header>
+        `
+    }
+}
+
+@customElement("head-container")
+// @ts-ignore
+class Container extends Component {
+    static styles = css`
+      :host {
+        display: block;
+        background: var(--color-green) center no-repeat;
+        padding: 15%;
       }
       h1 {
         font-weight: 600;
         margin: 5% 0;
       }
     `
+    @property({type: String})
+    image = ""
+    @property({type: String})
+    title = ""
+
     render() {
+        this.style.backgroundImage = `url("${this.image}")`
         return html`
-            <header>
-                <g-navbar></g-navbar>
-                <div class="container">
-                    <h1>Nous Rejoindre</h1>
-                </div>
-            </header>
+            <h1>${this.title}</h1>
         `
     }
 }
