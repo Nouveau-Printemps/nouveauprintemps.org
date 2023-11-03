@@ -28,7 +28,7 @@ export class NousRejoindre extends Component {
                     Lorem ipsum 
                 </p>
             </g-paragraph>
-            <g-footer></g-footer>
+            <g-footer color="light"></g-footer>
         `
     }
 }
