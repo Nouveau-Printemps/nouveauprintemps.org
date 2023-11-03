@@ -23,15 +23,15 @@ export class RootDemands extends Component {
     render() {
         return html`
             <r-demand src="https://placehold.co/300x300" alt="Temp">
-                Remettre en place une véritable démocratie en France
+                Mettre en place une démocratie novatrice et respectueuse
             </r-demand>
             <r-demand src="https://placehold.co/300x300" alt="Temp" left="true">
-                Lutter activement contre le changement climatique et contre l'exploitation des ressources
+                Lutter efficacement contre le changement climatique
             </r-demand>
             <r-demand src="https://placehold.co/300x300" alt="Temp">
-                Remettre le citoyen au centre des politiques et des actions
+                Remettre le citoyen au centre des politiques et actions
             </r-demand>
-            <simple-button href="/">Lire la version longue</simple-button>
+            <simple-button href="/nos-revendications">Lire la version longue</simple-button>
         `
     }
 }
@@ -68,7 +68,7 @@ class Demand extends Component {
         font-weight: bold;
         ${textColor};
       }
-      .right p {
+      .left p {
         text-align: right;
       }
 
@@ -84,7 +84,7 @@ class Demand extends Component {
         const content = this.innerHTML.trim()
         if (this.left) {
             return html`
-                <div class="light">
+                <div class="light left">
                     <p>${content}</p>
                     <img src="${this.src}" alt="${this.alt}">
                 </div>

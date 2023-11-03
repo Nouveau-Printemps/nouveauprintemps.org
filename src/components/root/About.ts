@@ -47,7 +47,7 @@ export class RootAbout extends Component {
                 <p>${unsafeHTML(content)}</p>
                 <img src="${this.src}" alt="${this.alt}">
             </div>
-            <simple-button href="/" light="true">Nous rejoindre</simple-button>
+            <simple-button href="/nous-rejoindre" light="true">Nous rejoindre</simple-button>
         `
     }
 }
