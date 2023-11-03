@@ -1,13 +1,20 @@
 import {Component} from "../Component.ts";
 import {customElement} from "lit/decorators.js";
-import {html} from "lit";
+import {css, html} from "lit";
 
 import '../global/Header.ts'
 import '../global/Footer.ts'
 import '../global/Paragraph.ts'
+import '../global/Button.ts'
 
 @customElement("rejoin-page")
 export class NousRejoindre extends Component {
+    static styles = css`
+      simple-button {
+        display: block;
+        margin-bottom: 10%;
+      }
+    `
     render() {
         return html`
             <g-header title="Nous Rejoindre"></g-header>
@@ -44,6 +51,7 @@ export class NousRejoindre extends Component {
                     tous.
                 </p>
             </g-paragraph>
+            <simple-button href="/reseaux" light="true">Nos réseaux</simple-button>
             <g-footer color="green"></g-footer>
         `
     }

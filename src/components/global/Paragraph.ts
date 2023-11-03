@@ -11,8 +11,11 @@ export class GlobalParagraph extends Component {
         background: var(--color-light);
         display: block;
       }
-      p {
+      p, ul {
         margin-top: 2rem;
+      }
+      li {
+        margin-top: 0.5rem;
       }
       .dark {
         color: var(--color-light);

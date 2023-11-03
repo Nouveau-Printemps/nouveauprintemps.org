@@ -157,13 +157,21 @@ const globalCSS = css`
     ${textColor};
   }
   
-  p {
+  p, li {
     font-family: 'Lato', sans-serif;
     font-size: 1.5em;
   }
   
+  ul {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+  
   .italic {
     font-style: italic;
+  }
+  .bold {
+    font-weight: bold;
   }
 
   a {
