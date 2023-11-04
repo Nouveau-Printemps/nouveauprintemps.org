@@ -50,8 +50,8 @@ export class NosRevendications extends Component {
                 </p>
                 <p>
                     Le changement de régime politique est nécessaire si on souhaite réinsuffler un vent de démocratie.
-                    Il est évident que notre système démocratique ne fonctionne plus : plus de 70% des français étaient 
-                    contre la réforme des retraites qui a été passée en force, les assemblés ne possèdent pas le pouvoir
+                    Il est évident que notre système démocratique ne fonctionne plus : plus de 70% des Français étaient 
+                    contre la réforme des retraites qui a été passée en force, les assemblées ne possèdent pas le pouvoir
                     de bloquer le gouvernement alors que ce pouvoir est essentiel en démocratie.
                 </p>
                 <p>
@@ -74,10 +74,10 @@ export class NosRevendications extends Component {
                 <p>
                     Le GIEC a affirmé dans la conclusion de son rapport de 2023 que "[jusqu'à 75% de la population mondiale
                     va disparaître entre aujourd'hui et 2100 suite au changement climatique]".
-                    Ne pas lutter activement contre, c'est être complice de plus de 5 milliards de mort futur.
+                    Ne pas lutter activement contre, c'est être complice de plus de 5 milliards de morts futurs.
                 </p>
                 <p>
-                    L'eau est une ressource rare qui est essentielle à la vie. Malheureusement on la gaspille et on la 
+                    L'eau est une ressource rare qui est essentielle à la vie. Malheureusement, on la gaspille et on la 
                     pollue. Sans eau, la vie n'existe plus. Il est primordial de la préserver. 
                 </p>
             </g-paragraph>
@@ -85,37 +85,48 @@ export class NosRevendications extends Component {
                 <p>
                     Changer le système par un respectant plus l'humain ne peut se faire sans changer aussi le fonctionnement
                     de l'économie et du social.
-                    Ainsi nous demandons d'en :
+                    Ainsi, nous demandons d'en :
                 </p>
                 <ul>
                     <li>finir avec le tout individuel ;</li>
                     <li>finir avec la recherche du profit ;</li>
                     <li>changer les moyens de transport ;</li>
                     <li>finir avec les inégalités économiques ;</li>
-                    <li>finir avec l'exploitation des travailleurs ;</li>
-                    <li>finir avec les aliénations liés au capitalisme ;</li>
                     <li>changer les circuits de production et de consommation.</li>
                 </ul>
                 <p>
-                    
+                    Le tout individuelle place la propriété individuelle comme objectif de vie : posséder une maison, une
+                    cuisine dernier cri, une grosse voiture de sport, etc.
+                    Cet objectif a pour principale conséquence de favoriser la surconsommation : tout le monde doit avoir
+                    une voiture alors, qu'en moyenne, elle reste 96% du temps à l'arrêt.
+                    En luttant contre, on réduit l'exploitation inutile des ressources tout en réduisant le coût d'utilisation.
                 </p>
                 <p>
-                    
+                    La recherche absolue du profit est provoquée par l'objectif final de posséder l'argent.
+                    Or, cette recherche écarte l'humain de l'équation : pourquoi devrais-je prendre en compte la vie du 
+                    travailleur, si cela revient à réduire mon profit, et donc à m'éloigner de mon objectif ?
+                    Pourquoi devrais-je lutter pour l'écologie si je n'en tire rien ?
                 </p>
                 <p>
-                    
+                    Pour lutter activement contre le désastre écologique, il est important de revoir l'intégralité du 
+                    fonctionnement de nos transports.
+                    Comme expliquer plus haut, la voiture individuelle est un désastre écologique : il est donc nécessaire
+                    de s'en séparer.
+                    Mais pour y parvenir, il est nécessaire de renforcer les autres moyens de transport si on ne souhaite
+                    pas perdre en mobilité.
                 </p>
                 <p>
-                    
+                    La moralité d'un acte ne dépend pas de la chance : conduire saoul est immoral peu importe ses conséquences.
+                    Il serait donc immoral de rémunérer quelqu'un en fonction de ses talents qui ne sont liés ni au mérite
+                    ou ni au travail de la personne, mais à sa chance.
                 </p>
                 <p>
-                    
-                </p>
-                <p>
-                    
-                </p>
-                <p>
-                    
+                    Un circuit de production et de consommation plus court va nécessairement augmenter la qualité de vie
+                    des consommateurs et producteurs, en plus de lutter activement contre les émissions de gaz à effet de 
+                    serre.
+                    Un circuit plus court favorise des produits locaux, bien souvent de meilleurs de qualité.
+                    De plus, la mise en place de ce type de circuit permet de réduire le nombre d'intermédiaires, et donc
+                    de réduire les coûts pour le consommateur tout en augmentant les bénéfices du producteur.
                 </p>
             </g-paragraph>
             <simple-button href="/nous-rejoindre" light="true">Rejoignez nous</simple-button>
