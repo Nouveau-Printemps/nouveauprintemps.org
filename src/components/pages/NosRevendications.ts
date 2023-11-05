@@ -129,7 +129,7 @@ export class NosRevendications extends Component {
                     de réduire les coûts pour le consommateur tout en augmentant les bénéfices du producteur.
                 </p>
             </g-paragraph>
-            <simple-button href="/nous-rejoindre" light="true">Rejoignez nous</simple-button>
+            <simple-button href="/nous-rejoindre" light>Rejoignez nous</simple-button>
             <g-footer color="dark"></g-footer>
         `
     }

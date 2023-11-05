@@ -44,7 +44,7 @@ export class Footer extends Component {
     color = "green"
 
     render() {
-        this.style.background = `var(--color-${this.color})`
+        this.style.background = this.genColor(this.color)
         return html`
             <div class=${this.color == "dark" ? "dark" : ""}>
                 <img src="https://placehold.co/250x100" alt="Logo">

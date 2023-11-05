@@ -16,6 +16,16 @@ export abstract class Component extends LitElement {
     static set styles(styles: CSSResultGroup) {
         this._styles = styles;
     }
+
+    protected content(): string {
+        const content = this.innerHTML
+        const regex = /<!--.*-->/g
+        return content.replace(regex, "").trim()
+    }
+
+    protected genColor(color: string): string {
+        return `var(--color-${color})`
+    }
 }
 
 const globalCSS = css`

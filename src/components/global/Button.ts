@@ -8,7 +8,8 @@ export class SimpleButton extends Component {
     static styles = css`
       :host {
         width: 100%;
-        --delay: 1s
+        --delay: 1s;
+        display: block;
       }
 
       div {
@@ -92,7 +93,7 @@ export class SimpleButton extends Component {
     light = false
 
     render() {
-        const content = this.innerHTML
+        const content = this.content()
         return html`
             <div class=${this.light ? "light" : ""}>
                 <a href="${this.href}">

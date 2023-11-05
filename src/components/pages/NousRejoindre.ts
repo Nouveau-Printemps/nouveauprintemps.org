@@ -51,7 +51,7 @@ export class NousRejoindre extends Component {
                     tous.
                 </p>
             </g-paragraph>
-            <simple-button href="/reseaux" light="true">Nos réseaux</simple-button>
+            <simple-button href="/reseaux" light>Nos réseaux</simple-button>
             <g-footer color="green"></g-footer>
         `
     }

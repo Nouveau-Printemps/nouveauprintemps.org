@@ -25,7 +25,7 @@ export class RootDemands extends Component {
             <r-demand src="https://placehold.co/300x300" alt="Temp">
                 Mettre en place une démocratie novatrice et respectueuse
             </r-demand>
-            <r-demand src="https://placehold.co/300x300" alt="Temp" left="true">
+            <r-demand src="https://placehold.co/300x300" alt="Temp">
                 Lutter contre le changement climatique
             </r-demand>
             <r-demand src="https://placehold.co/300x300" alt="Temp">
@@ -42,7 +42,7 @@ export class RootDemands extends Component {
 // @ts-ignore
 class Demand extends Component {
     @property({type: Boolean})
-    left? = false
+    left = false
     @property({type: String})
     src = ""
     @property({type: String})
@@ -81,7 +81,7 @@ class Demand extends Component {
     `
 
     render() {
-        const content = this.innerHTML.trim()
+        const content = this.content()
         if (this.left) {
             return html`
                 <div class="light left">

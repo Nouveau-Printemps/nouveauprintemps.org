@@ -34,9 +34,13 @@ export class GlobalParagraph extends Component {
     @property({type: String})
     color = "light"
 
+    @property({type: Boolean})
+    noMargin = false
+
     render() {
-        const content = this.innerHTML
-        if (this.color != "light") this.style.background = `var(--color-${this.color})`
+        const content = this.content()
+        if (this.color != "light") this.style.background = this.genColor(this.color)
+        if (this.noMargin) this.style.padding = "0"
         return html`
             <div class=${this.color == "dark" ? "dark" : "light"}>
                 <h2>${this.title}</h2>

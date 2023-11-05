@@ -40,7 +40,7 @@ export class RootAbout extends Component {
     alt = ""
 
     render() {
-        const content = this.innerHTML.trim()
+        const content = this.content()
         return html`
             <h2>Qui sommes-nous ?</h2>
             <div>
