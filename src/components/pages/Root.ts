@@ -13,12 +13,16 @@ export class Root extends Component {
         return html`
             <r-header></r-header>
             <r-demands></r-demands>
-            <r-about src="https://placehold.co/250x250" alt="Placeholder">
-                Révolté par l'inaction politique, nous sommes un groupe de jeunes qui ont décidés de reprendre leur futur
-                en main.  <br> <br>
-                Nouveau Printemps se place dans la continuité des nombreux groupes d'activistes écologistes, mais étend 
-                la lutte aux questions sociales, économiques et démocratiques.
-            </r-about>
+            <g-pib title="Qui sommes-nous ?" color="white" btn="Nous Rejoindre" shadowImage link="/nous-rejoindre">
+                <p>
+                    Révolté par l'inaction politique, nous sommes un groupe de jeunes qui ont décidé de reprendre leur futur
+                    en main.
+                </p>
+                <p>
+                    Nouveau Printemps se place dans la continuité des nombreux groupes d'activistes écologistes, mais étend
+                    la lutte aux questions sociales, économiques et démocratiques.
+                </p>
+            </g-pib>
             <g-footer></g-footer>
         `;
     }
