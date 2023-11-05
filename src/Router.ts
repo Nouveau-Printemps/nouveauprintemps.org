@@ -29,11 +29,16 @@ export class Router {
     }
 }
 
-export class Route {
+export type Route = {
     element: LitElement
     title: string
-    constructor(el: LitElement, t: string) {
-        this.element = el
-        this.title = t
-    }
 }
+
+// export class Route {
+//     element: LitElement
+//     title: string
+//     constructor(el: LitElement, t: string) {
+//         this.element = el
+//         this.title = t
+//     }
+// }

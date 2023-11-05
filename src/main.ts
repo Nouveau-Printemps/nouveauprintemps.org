@@ -6,12 +6,23 @@ import './assets/reset.css'
 import {NousRejoindre} from "./components/pages/NousRejoindre.ts";
 import {NotFound} from "./components/pages/NotFound.ts";
 import {NosRevendications} from "./components/pages/NosRevendications.ts";
+import {LitElement} from "lit";
+import {Reseaux} from "./components/pages/Reseaux.ts";
 
 const router = new Router()
 
-router.routes.set("/", new Route(new Root(), "Accueil"))
-router.routes.set("/nous-rejoindre", new Route(new NousRejoindre(), "Nous Rejoindre"))
-router.routes.set("/nos-revendications", new Route(new NosRevendications(), "Nos Revendications"))
-router.routes.set("404", new Route(new NotFound(), "404"))
+function routeGenerator(element: LitElement, title: string): Route {
+    const route: Route = {
+        title: title,
+        element: element
+    }
+    return route
+}
+
+router.routes.set("/", routeGenerator(new Root(), "Accueil"))
+router.routes.set("/nous-rejoindre", routeGenerator(new NousRejoindre(), "Nous Rejoindre"))
+router.routes.set("/nos-revendications", routeGenerator(new NosRevendications(), "Nos Revendications"))
+router.routes.set("/reseaux", routeGenerator(new Reseaux(), "Nos Réseaux"))
+router.routes.set("404", routeGenerator(new NotFound(), "404"))
 
 router.route(window.location.pathname)
