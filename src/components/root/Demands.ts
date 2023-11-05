@@ -25,7 +25,7 @@ export class RootDemands extends Component {
             <r-demand src="https://placehold.co/300x300" alt="Temp">
                 Mettre en place une démocratie novatrice et respectueuse
             </r-demand>
-            <r-demand src="https://placehold.co/300x300" alt="Temp">
+            <r-demand src="https://placehold.co/300x300" alt="Temp" left>
                 Lutter contre le changement climatique
             </r-demand>
             <r-demand src="https://placehold.co/300x300" alt="Temp">
@@ -52,11 +52,15 @@ class Demand extends Component {
 
     static styles = css`
       div {
-        display: flex;
+        display: grid;
         align-items: center;
         padding: 10%;
         gap: 64px;
         background: var(--color-dark);
+        grid-template-columns: 1fr 2fr;
+      }
+      .left {
+        grid-template-columns: 2fr 1fr;
       }
 
       .light {
@@ -81,11 +85,10 @@ class Demand extends Component {
     `
 
     render() {
-        const content = this.content()
         if (this.left) {
             return html`
                 <div class="light left">
-                    <p>${content}</p>
+                    <p>${this.content()}</p>
                     <img src="${this.src}" alt="${this.alt}">
                 </div>
             `
@@ -93,7 +96,7 @@ class Demand extends Component {
         return html`
             <div class="right">
                 <img src="${this.src}" alt="${this.alt}">
-                <p>${content}</p>
+                <p>${this.content()}</p>
             </div>
         `
     }

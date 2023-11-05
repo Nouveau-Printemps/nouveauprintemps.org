@@ -40,11 +40,10 @@ export class RootAbout extends Component {
     alt = ""
 
     render() {
-        const content = this.content()
         return html`
             <h2>Qui sommes-nous ?</h2>
             <div>
-                <p>${unsafeHTML(content)}</p>
+                <p>${unsafeHTML(this.content())}</p>
                 <img src="${this.src}" alt="${this.alt}">
             </div>
             <simple-button href="/nous-rejoindre" light="true">Nous rejoindre</simple-button>
