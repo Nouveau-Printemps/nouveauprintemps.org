@@ -51,7 +51,7 @@ export class Footer extends Component {
                 <div class="list">
                     <a href="/">Accueil</a>
                     <a href="https://blog." target="_blank" ">Blog</a>
-                    <a href="/reseaux">Réseaux</a>
+                    <a href="https://www.anhgelus.world/#legal-fr" target="_blank">Mentions Légales</a>
                 </div>
                 <p>
                     &copy; 2023 - Nouveau Printemps<br>
