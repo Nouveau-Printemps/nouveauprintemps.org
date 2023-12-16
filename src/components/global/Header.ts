@@ -13,7 +13,7 @@ export class GlobalHeader extends Component {
     `
 
     @property({type: String})
-    image = "https://placehold.co/1920x600"
+    image = "https://placehold.co/1920x900"
     @property({type: String})
     title = ""
 
@@ -34,6 +34,7 @@ class Container extends Component {
       :host {
         display: block;
         background: var(--color-green) center no-repeat;
+        background-size: cover;
         padding: 15%;
       }
       h1 {
