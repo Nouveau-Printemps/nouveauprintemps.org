@@ -11,7 +11,7 @@ export class Reseaux extends Component {
     render() {
         return html`
             <g-header title="Nos Réseaux" image="https://placehold.co/1920x600"></g-header>
-            <g-pib title="Discord" color="green">
+            <g-pib title="Discord" color="green" img="/icons/brands/discord.svg">
                 <p>
                     Véritable QG numérique, Discord est le lieu où nous sommes tous.
                     On y organise souvent des débats et des réunions publiques pour que quiconque puisse donner son 
@@ -21,7 +21,7 @@ export class Reseaux extends Component {
                     Discord est notre réseau le plus important.
                 </p>
             </g-pib>
-            <g-pib title="Mastodon" color="dark" left>
+            <g-pib title="Mastodon" color="dark" left img="/icons/brands/mastodon.svg">
                 <p>
                     Mastodon est l'alternative libre de Twitter.
                     Toutes les infos importantes y sont relayées.
@@ -31,7 +31,7 @@ export class Reseaux extends Component {
                     réseau. 
                 </p>
             </g-pib>
-            <g-pib title="YouTube" color="green">
+            <g-pib title="YouTube" color="green" img="/icons/brands/youtube.svg">
                 <p>
                     YouTube est l'une de nos deux titles de diffusion vidéo.
                     Toutes les vidéos importantes y seront diffusées, même si, certaines fois, elles seront censurées pour
@@ -41,7 +41,7 @@ export class Reseaux extends Component {
                     Le contenu posté sera essentiellement constitué de présentations, de trailers et de "clip".
                 </p>
             </g-pib>
-            <g-pib title="PeerTube" color="dark" left>
+            <g-pib title="PeerTube" color="dark" left img="/icons/brands/peertube.svg">
                 <p>
                     Deuxième title de diffusion vidéo que nous utilisons, PeerTube est l'alternative libre de YouTube.
                     Le principal avantage de PeerTube est l'absence de censure politique nous concernant.
