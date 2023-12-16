@@ -21,12 +21,11 @@ export class NosRevendications extends Component {
             </g-header>
             <g-paragraph title="Présentation" color="dark">
                 <p>
-                    L'ensemble de nos revendications s'axe autour d'une thématique global : <br> 
-                    <span class="bold">le renouveau des institutions</span>.
+                    L'ensemble de nos revendications s'axe autour d'une thématique global : <span class="bold">le renouveau des institutions</span>.
                 </p>
                 <p>
                     Chez Nouveau Printemps, nous souhaitons réellement reconstruire le monde pour le rendre enfin viable.
-                    Si vous êtes en accord avec nos principes et nos revendications, n'hésitez pas à
+                    Si vous êtes en accord avec nos principes et revendications, n'hésitez pas à
                     <a href="/nous-rejoindre">nous rejoindre</a>.
                 </p>
                 <p>
@@ -51,8 +50,8 @@ export class NosRevendications extends Component {
                 <p>
                     Le changement de régime politique est nécessaire si on souhaite réinsuffler un vent de démocratie.
                     Il est évident que notre système démocratique ne fonctionne plus : plus de 70% des Français étaient 
-                    contre la réforme des retraites qui a été passée en force, les assemblées ne possèdent pas le pouvoir
-                    de bloquer le gouvernement alors que ce pouvoir est essentiel en démocratie.
+                    contre la réforme des retraites qui a été passée en force. Cela montre bien que les assemblées ne possèdent
+                    pas le pouvoir de bloquer le gouvernement alors que ce pouvoir est essentiel en démocratie.
                 </p>
                 <p>
                     Actuellement l'institution judiciaire provoque de nombreux torts : violences policiaires à répétitions,
@@ -78,14 +77,14 @@ export class NosRevendications extends Component {
                 </p>
                 <p>
                     L'eau est une ressource rare qui est essentielle à la vie. Malheureusement, on la gaspille et on la 
-                    pollue. Sans eau, la vie n'existe plus. Il est primordial de la préserver. 
+                    pollue. Sans eau, la vie n'existe plus. Il est primordial de la préserver. Il en va de même pour
+                    l'ensemble des autres resources disponibles en quantité limitée.
                 </p>
             </g-paragraph>
             <g-paragraph title="Renouveau social et économique" color="white">
                 <p>
-                    Changer le système par un respectant plus l'humain ne peut se faire sans changer aussi le fonctionnement
-                    de l'économie et du social.
-                    Ainsi, nous demandons d'en :
+                    Il est nécessaire de changer entièrement notre système pour un plus juste. Ce changement ne peut se faire sans
+                    modifier l'intégralité du monde économique et du social. Ainsi, nous demandons d'en :
                 </p>
                 <ul>
                     <li>finir avec le tout individuel ;</li>

@@ -33,7 +33,7 @@ export class Reseaux extends Component {
             </g-pib>
             <g-pib title="YouTube" color="green" img="/icons/brands/youtube.svg">
                 <p>
-                    YouTube est l'une de nos deux titles de diffusion vidéo.
+                    YouTube est l'un de deux moyens de diffusion vidéo que nous utilisons.
                     Toutes les vidéos importantes y seront diffusées, même si, certaines fois, elles seront censurées pour
                     éviter de se faire bannir.
                 </p>
@@ -43,7 +43,7 @@ export class Reseaux extends Component {
             </g-pib>
             <g-pib title="PeerTube" color="dark" left img="/icons/brands/peertube.svg">
                 <p>
-                    Deuxième title de diffusion vidéo que nous utilisons, PeerTube est l'alternative libre de YouTube.
+                    Deuxième manière de diffusion vidéo que nous utilisons, PeerTube est l'alternative libre de YouTube.
                     Le principal avantage de PeerTube est l'absence de censure politique nous concernant.
                 </p>
                 <p>

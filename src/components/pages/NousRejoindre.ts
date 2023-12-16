@@ -36,8 +36,7 @@ export class NousRejoindre extends Component {
                     à nos actions.
                 </p>
                 <p>
-                    Hésitez pas à nous suivre sur nos <a href="/reseaux">réseaux</a> pour être informé de nos dernières actions,
-                    et surtout, de comment y participer.
+                    N'hésitez pas à nous suivre sur nos <a href="/reseaux">réseaux</a> pour être informé de nos dernières actions.
                 </p>
             </g-paragraph>
             <g-paragraph title="Rejoindre l'équipe" color="white">
