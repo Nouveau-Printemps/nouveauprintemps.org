@@ -16,7 +16,7 @@ export class Root extends Component {
             <g-pib title="Qui sommes-nous ?" color="white" btn="Nous Rejoindre" shadowImage link="/nous-rejoindre">
                 <p>
                     Révolté par l'inaction politique, nous sommes un groupe de jeunes qui ont décidé de reprendre leur
-                    future en main.
+                    futur en main.
                 </p>
                 <p>
                     Nouveau Printemps se place dans la continuité des nombreux groupes d'activistes écologistes tout en

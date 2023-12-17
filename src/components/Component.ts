@@ -163,6 +163,8 @@ const globalCSS = css`
     // breakpoint
     --br-very-large: 970px;
     --br-large: 810px;
+    --br-mid: 600px;
+    --br-tiny: 510px;
   }
     
     .is-disabled {
