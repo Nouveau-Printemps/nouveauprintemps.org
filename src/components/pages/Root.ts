@@ -15,16 +15,20 @@ export class Root extends Component {
             <r-demands></r-demands>
             <g-pib title="Qui sommes-nous ?" color="white" btn="Nous Rejoindre" shadowImage link="/nous-rejoindre">
                 <p>
-                    Révolté par l'inaction politique, nous sommes un groupe de jeunes qui ont décidé de reprendre leur futur
-                    en main.
+                    Révolté par l'inaction politique, nous sommes un groupe de jeunes qui ont décidé de reprendre leur
+                    future en main.
                 </p>
                 <p>
-                    Nouveau Printemps se place dans la continuité des nombreux groupes d'activistes écologistes, mais étend
-                    la lutte aux questions sociales, économiques et démocratiques.
+                    Nouveau Printemps se place dans la continuité des nombreux groupes d'activistes écologistes tout en
+                    étendant la lutte aux questions sociales, économiques et démocratiques.
                 </p>
             </g-pib>
             <g-footer></g-footer>
         `;
+    }
+
+    afterRender() {
+
     }
 }
 

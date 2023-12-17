@@ -160,7 +160,13 @@ const globalCSS = css`
     --color-light: rgba(255, 255, 255, 0.8);
     --color-green: #c2e1c1;
     --color-dark: #242333;
+    // breakpoint
+    --br-large: 970px;
   }
+    
+    .is-disabled {
+        display: none;
+    }
 
   body {
     font-family: 'Lato', sans-serif;

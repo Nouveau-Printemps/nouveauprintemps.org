@@ -1,4 +1,4 @@
-import {LitElement} from "lit";
+import {Component} from "./components/Component.ts";
 
 export class Router {
     routes = new Map<string,Route>()
@@ -30,7 +30,7 @@ export class Router {
 }
 
 export type Route = {
-    element: LitElement
+    element: Component
     title: string
 }
 
