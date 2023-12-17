@@ -84,6 +84,11 @@ export class SimpleButton extends Component {
           width: 0;
         }
       }
+      @media only screen and (max-width: 810px) {
+          div {
+              font-size: 26px;
+          }
+      }
     `
 
     @property({type: String})

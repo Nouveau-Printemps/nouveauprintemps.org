@@ -161,7 +161,8 @@ const globalCSS = css`
     --color-green: #c2e1c1;
     --color-dark: #242333;
     // breakpoint
-    --br-large: 970px;
+    --br-very-large: 970px;
+    --br-large: 810px;
   }
     
     .is-disabled {
@@ -209,6 +210,20 @@ const globalCSS = css`
 
   h3 {
     font-size: 2em;
+  }
+  @media only screen and (max-width: 810px) {
+      h1,h2,h3 {
+          font-weight: 600;
+      }
+      h1 {
+          font-size: 2.5em;
+      }
+      h2 {
+          font-size: 2.25em;
+      }
+      h2 {
+          font-size: 1.75em;
+      }
   }
 `
 

@@ -38,6 +38,18 @@ export class Footer extends Component {
       p {
         font-size: 1.1em;
       }
+      @media only screen and (max-width: 810px) {
+          div {
+              grid-template-columns: 1fr 1fr;
+          }
+          .list {
+              flex-direction: column;
+              gap: 12px;
+          }
+          img {
+              display: none;
+          }
+      }
     `
 
     @property({type: String})

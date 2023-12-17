@@ -82,6 +82,22 @@ class Demand extends Component {
       img {
         ${shadowImg};
       }
+      @media only screen and (max-width: 810px) {
+          div {
+              display: flex;
+              flex-direction: column;
+          }
+          .left {
+              flex-direction: column-reverse;
+          }
+          p {
+              text-align: center;
+              font-size: 45px;
+          }
+          .left p {
+              text-align: center;
+          }
+      }
     `
 
     render() {

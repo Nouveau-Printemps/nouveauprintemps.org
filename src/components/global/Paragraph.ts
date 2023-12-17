@@ -81,6 +81,11 @@ export class ParagraphImageButton extends Component {
       simple-button {
         margin-top: 10%;
       }
+      @media only screen and (max-width: 810px) {
+          div {
+              grid-template-columns: 1fr 1fr;
+          }
+      }
     `
 
     @property({type: String})
