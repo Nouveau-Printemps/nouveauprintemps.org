@@ -126,7 +126,7 @@ export class ParagraphImageButton extends Component {
         if (this.left) {
             return html`
             <div class="content left">
-                <img src="${this.img}" alt="QR Code" class=${this.shadowImage ? "shadow" : ""}>
+                <img src="${this.img}" alt="${"Image "+this.title}" class=${this.shadowImage ? "shadow" : ""}>
                 <g-paragraph title="${this.title}" noMargin color="${this.color}">
                     ${unsafeHTML(this.content())}
                 </g-paragraph>
@@ -139,7 +139,7 @@ export class ParagraphImageButton extends Component {
                 <g-paragraph title="${this.title}" noMargin color="${this.color}">
                     ${unsafeHTML(this.content())}
                 </g-paragraph>
-                <img src="${this.img}" alt="QR" class=${this.shadowImage ? "shadow" : ""}>
+                <img src="${this.img}" alt="${"Image "+this.title}" class=${this.shadowImage ? "shadow" : ""}>
             </div>
             ${this.button()}
         `
