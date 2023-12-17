@@ -17,13 +17,13 @@ export class GlobalNavbar extends Component {
         padding: 16px 0;
       }
       nav {
-        margin: 0 10% 0 auto;
-        display: flex;
-        gap: 32px;
-        width: 70%;
+        //margin: 0 10% 0 auto;
+        display: grid;
+        width: 100%;
+        grid: auto-flow dense / 1fr 1fr 1fr;
         text-align: center;
-        flex-direction: row;
         justify-content: right;
+        align-items: center;
       }
       #hamburger {
           display: none;
@@ -87,6 +87,7 @@ export class GlobalNavbar extends Component {
                 width: 100%;
                 height: 85%;
                 background: var(--color-green);
+                gap: 10%;
             }
             #hamburger.is-enabled ~ nav a {
                 color: var(--color-dark);
