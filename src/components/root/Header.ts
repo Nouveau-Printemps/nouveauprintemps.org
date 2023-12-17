@@ -17,7 +17,7 @@ export class RootHeader extends Component {
       }
       .container {
         top: 0;
-        z-index: 1;
+        z-index: 0;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -41,13 +41,19 @@ export class RootHeader extends Component {
         ${textColor};
       }
       video {
+        z-index: 1;
         position: absolute;
         ${RootHeader.video()};
         ${RootHeader.place()}
       }
       g-navbar {
         z-index: 2;
-        position: relative;
+        position: absolute;
+      }
+      @media only screen and (max-width: 970px) {
+          g-navbar {
+              display: none;
+          }
       }
   `;
 
@@ -89,12 +95,12 @@ export class RootHeader extends Component {
         }
         return html`
             <header>
-                <g-navbar></g-navbar>
                 <div class="container">
                     <video autoplay muted loop>
                         <source src="/videos/placeholder.mp4">
                     </video>
                 </div>
+                <g-navbar></g-navbar>
                 <div class="content">
 <!--                    <div class="text">-->
 <!--                        <h1>Nouveau Printemps</h1>-->
