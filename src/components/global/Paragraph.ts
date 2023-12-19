@@ -29,6 +29,16 @@ export class GlobalParagraph extends Component {
       .dark a {
         color: var(--color-light);
       }
+        img {
+            width: 85%;
+            //height: 50%;
+        }
+        img.center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 5rem;
+        }
     `
 
     @property({type: String})
@@ -36,6 +46,12 @@ export class GlobalParagraph extends Component {
 
     @property({type: String})
     color = "light"
+
+    @property({type: String})
+    image = ""
+
+    @property({type: String})
+    alt = ""
 
     @property({type: Boolean})
     noMargin = false
@@ -46,9 +62,17 @@ export class GlobalParagraph extends Component {
         if (this.noMargin) this.style.padding = "0"
         return html`
             <div class=${this.color == "dark" ? "dark" : "light"}>
+                ${this.renderImage()}
                 <h2>${this.title}</h2>
                 ${unsafeHTML(content)}
             </div>
+        `
+    }
+
+    private renderImage() {
+        if (this.image == "") return html``
+        return html`
+            <img class="center shadow" src="${this.image}" alt="${this.alt}">
         `
     }
 }
