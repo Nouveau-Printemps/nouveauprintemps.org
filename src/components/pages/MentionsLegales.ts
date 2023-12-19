@@ -43,9 +43,9 @@ export class MentionsLegales extends Component {
                 </p>
                 <p>
                     Nous récupérons uniquement votre adresse IP que nous stockons pendant 1 an pour des raisons légales. <br>
-                    Nous utilisons aussi l'outil de statistique de CloudFlare, Inc (
-                    <a href="https://www.cloudflare.com/en-en/privacypolicy/" target="_blank">politique de confidentialité</a>)
-                    qui n'est pas désactivable puisqu'il n'identifie pas l'utilisateur.
+                    Nous utilisons aussi l'outil de statistique de CloudFlare, Inc 
+                    (<a href="https://www.cloudflare.com/en-en/privacypolicy/" target="_blank">politique de 
+                    confidentialité</a>) qui n'est pas désactivable puisqu'il n'identifie pas l'utilisateur.
                 </p>
             </g-paragraph>
             <g-footer color="green"></g-footer>

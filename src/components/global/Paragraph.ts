@@ -48,7 +48,7 @@ export class GlobalParagraph extends Component {
     color = "light"
 
     @property({type: String})
-    image = ""
+    img = ""
 
     @property({type: String})
     alt = ""
@@ -70,9 +70,9 @@ export class GlobalParagraph extends Component {
     }
 
     private renderImage() {
-        if (this.image == "") return html``
+        if (this.img == "") return html``
         return html`
-            <img class="center shadow" src="${this.image}" alt="${this.alt}">
+            <img class="center shadow" src="${this.img}" alt="${this.alt}">
         `
     }
 }

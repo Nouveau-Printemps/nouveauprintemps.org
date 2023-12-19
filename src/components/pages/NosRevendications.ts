@@ -21,7 +21,7 @@ export class NosRevendications extends Component {
             </g-header>
             <g-paragraph title="Présentation" color="dark">
                 <p>
-                    L'ensemble de nos revendications s'axe autour d'une thématique global : <span class="bold">le renouveau des institutions</span>.
+                    L'ensemble de nos revendications s'axe autour d'une thématique globale : <span class="bold">le renouveau des institutions</span>.
                 </p>
                 <p>
                     Chez Nouveau Printemps, nous souhaitons réellement reconstruire le monde pour le rendre enfin viable.
@@ -29,103 +29,61 @@ export class NosRevendications extends Component {
                     <a href="/nous-rejoindre">nous rejoindre</a>.
                 </p>
                 <p>
-                    Attention, ces revendications ne sont pas triées par importance : on était obligé de les trier pour
+                    Ces revendications ne sont pas triées par importance : on était obligé de le faire pour
                     les présenter correctement.
                 </p>
             </g-paragraph>
-            <g-paragraph title="Renouveau démocratique" color="white">
+            <g-paragraph title="Renouveau démocratique" color="white" img="https://placehold.co/1200x600" alt="">
                 <p>
-                    Nous demandons à l'État français de :
-                </p>
-                <ul>
-                    <li>devenir intégralement transparent ;</li>
-                    <li>changer de régime politique ;</li>
-                    <li>réformer entièrement l'institution judiciaire.</li>
-                </ul>
-                <p>
-                    La transparence est essentielle si on souhaite garder un contrôle sur l'État.
-                    Cette transparence permettra de mieux comprendre son fonctionnement en allant des dépenses de l'Élysée,
-                    à la présence des élus lors des votes.
+                    Le gouvernement, les élu⋅es et les entreprises doivent reconnaître l'importance d'avoir un mode de
+                    fonctionnement transparent. Il s'agit de l'unique manière de garantir nos droits et libertés tout en
+                    contrôlant ces groupements.
                 </p>
                 <p>
-                    Le changement de régime politique est nécessaire si on souhaite réinsuffler un vent de démocratie.
-                    Il est évident que notre système démocratique ne fonctionne plus : plus de 70% des Français étaient 
-                    contre la réforme des retraites qui a été passée en force. Cela montre bien que les assemblées ne possèdent
-                    pas le pouvoir de bloquer le gouvernement alors que ce pouvoir est essentiel en démocratie.
+                    Ils et elles doivent reconnaître deux nouveaux pouvoirs : les pouvoirs médiatique et économique.
                 </p>
                 <p>
-                    Actuellement l'institution judiciaire provoque de nombreux torts : violences policiaires à répétitions,
-                    racisme, sexisme et homophobie omniprésente au sein de la police, trop de plaintes jamais ou mal traités
-                    par manque de temps, et on en passe.
-                    Selon nous, l'unique manière de régler ces problèmes serait de la réformer intégralement pour repartir
-                    sur une base saine.
+                    Ils et elles doivent accepter de changer de régime politique pour un plus adapté à la situation 
+                    actuelle. Ce changement aura comme objectif de remettre le citoyen au centre des actions en l'écoutant
+                    et en le considérant beaucoup plus.
                 </p>
             </g-paragraph>
-            <g-paragraph title="Lutte écologique" color="green">
+            <g-paragraph title="Lutte écologique" color="green" img="https://placehold.co/1200x600" alt="">
                 <p>
-                    La crise écologique est évidente et il est criminel de ne pas lutter contre. Nous demandons donc de
-                    lutter activement contre :
-                </p>
-                <ul>
-                    <li>le changement climatique ;</li>
-                    <li>l'exploitation des ressources.</li>
-                </ul>
-                <p>
-                    Le GIEC a affirmé dans la conclusion de son rapport de 2023 que "[jusqu'à 75% de la population mondiale
-                    va disparaître entre aujourd'hui et 2100 suite au changement climatique]".
-                    Ne pas lutter activement contre, c'est être complice de plus de 5 milliards de morts futurs.
+                    Le gouvernement, les élu⋅es et les entreprises doivent reconnaître l'enjeu climatique planétaire.
                 </p>
                 <p>
-                    L'eau est une ressource rare qui est essentielle à la vie. Malheureusement, on la gaspille et on la 
-                    pollue. Sans eau, la vie n'existe plus. Il est primordial de la préserver. Il en va de même pour
-                    l'ensemble des autres resources disponibles en quantité limitée.
+                    Ils et elles doivent reconnaître leur rôle à jouer dans cette crise et ainsi mettre en place des actions
+                    fortes pour lutter activement contre. 
+                </p>
+                <p>
+                    Ils et elles doivent informer la population avec transparence sur la gravité de la situation. 
+                </p>
+                <p>
+                    Ils et elles doivent condamner l'ensemble des actions allant contre cette lutte.
+                </p>
+                <p>
+                    La Cour Internationale de Justice doit condamner pour crime contre l'humanité l'ensemble des personnes
+                    morales ou physiques ayant empêché à grande échelle l'établissement du consensus. 
                 </p>
             </g-paragraph>
-            <g-paragraph title="Renouveau social et économique" color="white">
+            <g-paragraph title="Renouveau social et économique" color="white" img="https://placehold.co/1200x600" alt="">
                 <p>
-                    Il est nécessaire de changer entièrement notre système pour un plus juste. Ce changement ne peut se faire sans
-                    modifier l'intégralité du monde économique et du social. Ainsi, nous demandons d'en :
-                </p>
-                <ul>
-                    <li>finir avec le tout individuel ;</li>
-                    <li>finir avec la recherche du profit ;</li>
-                    <li>changer les moyens de transport ;</li>
-                    <li>finir avec les inégalités économiques ;</li>
-                    <li>changer les circuits de production et de consommation.</li>
-                </ul>
-                <p>
-                    Le tout individuelle place la propriété individuelle comme objectif de vie : posséder une maison, une
-                    cuisine dernier cri, une grosse voiture de sport, etc.
-                    Cet objectif a pour principale conséquence de favoriser la surconsommation : tout le monde doit avoir
-                    une voiture alors, qu'en moyenne, elle reste 96% du temps à l'arrêt.
-                    En luttant contre, on réduit l'exploitation inutile des ressources tout en réduisant le coût d'utilisation.
+                    Le gouvernement, les élu⋅es et les entreprises doivent reconnaître que le tout individuel empêche
+                    toute évolution sociétale.
                 </p>
                 <p>
-                    La recherche absolue du profit est provoquée par l'objectif final de posséder l'argent.
-                    Or, cette recherche écarte l'humain de l'équation : pourquoi devrais-je prendre en compte la vie du 
-                    travailleur, si cela revient à réduire mon profit, et donc à m'éloigner de mon objectif ?
-                    Pourquoi devrais-je lutter pour l'écologie si je n'en tire rien ?
+                    Ils et elles doivent arrêter de rechercher le profit à tout prix. 
                 </p>
                 <p>
-                    Pour lutter activement contre le désastre écologique, il est important de revoir l'intégralité du 
-                    fonctionnement de nos transports.
-                    Comme expliquer plus haut, la voiture individuelle est un désastre écologique : il est donc nécessaire
-                    de s'en séparer.
-                    Mais pour y parvenir, il est nécessaire de renforcer les autres moyens de transport si on ne souhaite
-                    pas perdre en mobilité.
+                    Ils et elles doivent reconnaître que toute vie humaine a droit au confort, peu importe ses origines,
+                    son revenu et sa culture. Et ils et elles doivent reconnaître qu'il est injuste d'imposer une vie à
+                    un humain en fonction de critère qu'il ne peut influer (classe sociale d'origine, couleur de peau, 
+                    etc.).
                 </p>
                 <p>
-                    La moralité d'un acte ne dépend pas de la chance : conduire saoul est immoral peu importe ses conséquences.
-                    Il serait donc immoral de rémunérer quelqu'un en fonction de ses talents qui ne sont liés ni au mérite
-                    ou ni au travail de la personne, mais à sa chance.
-                </p>
-                <p>
-                    Un circuit de production et de consommation plus court va nécessairement augmenter la qualité de vie
-                    des consommateurs et producteurs, en plus de lutter activement contre les émissions de gaz à effet de 
-                    serre.
-                    Un circuit plus court favorise des produits locaux, bien souvent de meilleurs de qualité.
-                    De plus, la mise en place de ce type de circuit permet de réduire le nombre d'intermédiaires, et donc
-                    de réduire les coûts pour le consommateur tout en augmentant les bénéfices du producteur.
+                    Ils et elles doivent rémunérer non plus exclusivement en fonction des compétences, mais doivent aussi
+                    prendre en compte la pénibilité et l'importance du travail.
                 </p>
             </g-paragraph>
             <simple-button href="/nous-rejoindre" light>Rejoignez nous</simple-button>
