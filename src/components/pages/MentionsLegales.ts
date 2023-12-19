@@ -22,6 +22,10 @@ export class MentionsLegales extends Component {
                     Le contenu des sites est protégé par la licence CC-BY-SA 4.0, sauf mention contraire. <br>
                     Le code source des sites est protégé par la licence AGPL-3.0-or-later, sauf mention contraire.
                 </p>
+                <p>
+                    Certaines images utilisées proviennent d'<a href="https://unsplash.com/" target="_blank">Unsplash</a>.
+                    Ces images sont repérables à l'aide de leur nom alternatif contenant "Unsplash".
+                </p>
             </g-paragraph>
             <g-paragraph title="Hébergement" color="white">
                 <p>

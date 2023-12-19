@@ -72,7 +72,7 @@ export class GlobalParagraph extends Component {
     private renderImage() {
         if (this.img == "") return html``
         return html`
-            <img class="center shadow" src="${this.img}" alt="${this.alt}">
+            <img class="center" src="${this.img}" alt="${this.alt}">
         `
     }
 }

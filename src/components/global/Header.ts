@@ -13,7 +13,7 @@ export class GlobalHeader extends Component {
     `
 
     @property({type: String})
-    image = "https://placehold.co/1920x900"
+    img = "https://placehold.co/1920x900"
     @property({type: String})
     title = ""
 
@@ -21,7 +21,7 @@ export class GlobalHeader extends Component {
         return html`
             <header>
                 <g-navbar></g-navbar>
-                <head-container image=${this.image} title=${this.title}></head-container>
+                <head-container img=${this.img} title=${this.title}></head-container>
             </header>
         `
     }
@@ -43,12 +43,12 @@ class Container extends Component {
       }
     `
     @property({type: String})
-    image = ""
+    img = ""
     @property({type: String})
     title = ""
 
     render() {
-        this.style.backgroundImage = `url("${this.image}")`
+        this.style.backgroundImage = `url("${this.img}")`
         return html`
             <h1>${this.title}</h1>
         `

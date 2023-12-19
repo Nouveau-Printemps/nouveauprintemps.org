@@ -17,7 +17,7 @@ export class NosRevendications extends Component {
     `
     render() {
         return html`
-            <g-header title="Nos Revendications">
+            <g-header title="Nos Revendications" img="https://placehold.co/1920x900">
             </g-header>
             <g-paragraph title="Présentation" color="dark">
                 <p>
@@ -33,7 +33,8 @@ export class NosRevendications extends Component {
                     les présenter correctement.
                 </p>
             </g-paragraph>
-            <g-paragraph title="Renouveau démocratique" color="white" img="https://placehold.co/1200x600" alt="">
+            <g-paragraph title="Renouveau démocratique" color="white" img="/img/we-demand-justice-tiny.webp" 
+                         alt="We Demand Justice + Change - Unsplash">
                 <p>
                     Le gouvernement, les élu⋅es et les entreprises doivent reconnaître l'importance d'avoir un mode de
                     fonctionnement transparent. Il s'agit de l'unique manière de garantir nos droits et libertés tout en
@@ -48,7 +49,8 @@ export class NosRevendications extends Component {
                     et en le considérant beaucoup plus.
                 </p>
             </g-paragraph>
-            <g-paragraph title="Lutte écologique" color="green" img="https://placehold.co/1200x600" alt="">
+            <g-paragraph title="Lutte écologique" color="green" img="/img/climate-justice-now-tiny.webp" 
+                         alt="Climate Justice Now - Unsplash">
                 <p>
                     Le gouvernement, les élu⋅es et les entreprises doivent reconnaître l'enjeu climatique planétaire.
                 </p>
@@ -67,7 +69,8 @@ export class NosRevendications extends Component {
                     morales ou physiques ayant empêché à grande échelle l'établissement du consensus. 
                 </p>
             </g-paragraph>
-            <g-paragraph title="Renouveau social et économique" color="white" img="https://placehold.co/1200x600" alt="">
+            <g-paragraph title="Renouveau social et économique" color="white" img="/img/no-justice-no-peace-tiny.webp" 
+                         alt="No Justice No Peace - Unsplash">
                 <p>
                     Le gouvernement, les élu⋅es et les entreprises doivent reconnaître que le tout individuel empêche
                     toute évolution sociétale.
