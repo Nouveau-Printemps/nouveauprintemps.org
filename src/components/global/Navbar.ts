@@ -18,11 +18,11 @@ export class GlobalNavbar extends Component {
         height: 50px;
       }
       nav {
-        //margin: 0 10% 0 auto;
+        margin: 0 10% 0 auto;
         display: grid;
-        width: 100%;
-        grid: auto-flow dense / 1fr 1fr 1fr;
-        text-align: center;
+        width: 71%;
+        grid: auto-flow dense / 2fr 4fr 3fr;
+        text-align: right;
         justify-content: right;
         align-items: center;
       }
