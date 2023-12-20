@@ -10,7 +10,7 @@ import '../global/Paragraph.ts'
 export class Reseaux extends Component {
     render() {
         return html`
-            <g-header title="Nos Réseaux" image="https://placehold.co/1920x600"></g-header>
+            <g-header title="Nos Réseaux" img="/img/abstract-colors-white.webp"></g-header>
             <g-pib title="Discord" color="green" img="/icons/brands/discord.svg">
                 <p>
                     Véritable QG numérique, Discord est le lieu où nous sommes tous.

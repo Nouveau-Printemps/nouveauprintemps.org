@@ -17,7 +17,7 @@ export class NosRevendications extends Component {
     `
     render() {
         return html`
-            <g-header title="Nos Revendications" img="https://placehold.co/1920x900">
+            <g-header title="Nos Revendications" img="/img/snowdrop.webp">
             </g-header>
             <g-paragraph title="Présentation" color="dark">
                 <p>

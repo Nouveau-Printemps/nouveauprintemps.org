@@ -30,7 +30,7 @@ export class NotFound extends Component {
 
     render() {
         return html`
-            <g-header title="Oh non, un 404"></g-header>
+            <g-header title="Oh non, un 404" img="/img/lost-fog.webp"></g-header>
             <g-paragraph title="Vous vous êtes perdu·e·s ?">
                 <p>
                     Vous cherchiez peut-être la page ${this.randomLink()} ? 

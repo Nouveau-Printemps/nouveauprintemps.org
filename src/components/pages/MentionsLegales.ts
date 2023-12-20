@@ -6,7 +6,7 @@ import {html} from "lit";
 export class MentionsLegales extends Component {
     render() {
         return html`
-            <g-header title="Mentions Légales">
+            <g-header title="Mentions Légales" img="/img/numeric-tunnel.webp">
             </g-header>
             <g-paragraph title="Mentions Légales" color="white">
                 <p>

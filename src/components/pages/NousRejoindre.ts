@@ -17,7 +17,7 @@ export class NousRejoindre extends Component {
     `
     render() {
         return html`
-            <g-header title="Nous Rejoindre"></g-header>
+            <g-header title="Nous Rejoindre" img="/img/clouds.webp"></g-header>
             <g-paragraph title="Nous ne sommes pas une organisation classique" color="dark">
                 <p>
                     Nouveau Printemps n'est ni une association, ni un syndicat, ni une entreprise, ni aucune autre forme
