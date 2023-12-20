@@ -75,11 +75,12 @@ export class GlobalNavbar extends Component {
                 display: flex;
             }
             nav {
-                display: none;
+                opacity: 0;
+                position: absolute;
+                top: calc(-100% + 50px + 2*16px);
             }
             #hamburger.is-enabled ~ nav {
                 display: flex;
-                position: absolute;
                 top: calc(50px + 2*16px);
                 flex-direction: column;
                 margin: 0 auto 0 auto;
@@ -88,6 +89,8 @@ export class GlobalNavbar extends Component {
                 height: calc(100% - 50px - 2*16px);
                 background: var(--color-green);
                 gap: 10%;
+                opacity: 1;
+                transition: opacity .2s ease-in;
             }
             #hamburger.is-enabled ~ nav a {
                 color: var(--color-dark);
