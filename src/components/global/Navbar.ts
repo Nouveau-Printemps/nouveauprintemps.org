@@ -15,6 +15,7 @@ export class GlobalNavbar extends Component {
         text-transform: uppercase;
         align-items: center;
         padding: 16px 0;
+        height: 50px;
       }
       nav {
         //margin: 0 10% 0 auto;

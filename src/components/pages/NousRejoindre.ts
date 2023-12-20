@@ -21,11 +21,11 @@ export class NousRejoindre extends Component {
             <g-paragraph title="Nous ne sommes pas une organisation classique" color="dark">
                 <p>
                     Nouveau Printemps n'est ni une association, ni un syndicat, ni une entreprise, ni aucune autre forme
-                    légal.
+                    légale.
                     Nous sommes uniquement un mouvement né d'une idée. 
                 </p>
                 <p>
-                    Comme nous sommes rien légalement parlant, il n'y a aucune manière officielle de nous rejoindre, et 
+                    Comme nous ne sommes rien légalement parlant, il n'y a aucune manière officielle de nous rejoindre, et 
                     nous ne comptons pas en créer.
                     Nous cherchons avant tout des personnes qui adhèrent à nos valeurs, à nos idées et à nos revendications.
                 </p>
@@ -42,7 +42,7 @@ export class NousRejoindre extends Component {
             <g-paragraph title="Rejoindre l'équipe" color="white">
                 <p>
                     Vous souhaitez faire <span class="italic">encore</span> plus ?
-                    Alors rejoignez notre équipe !
+                    Alors, rejoignez notre équipe !
                 </p>
                 <p>
                     N'hésitez pas à nous contacter sur n'importe lequel de nos <a href="/reseaux">réseaux</a>.

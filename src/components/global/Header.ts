@@ -41,6 +41,11 @@ class Container extends Component {
         font-weight: 600;
         margin: 5% 0;
       }
+        @media only screen and (max-width: 600px) {
+            :host {
+                padding: 30vh 15%;
+            }
+        }
     `
     @property({type: String})
     img = ""
@@ -48,7 +53,7 @@ class Container extends Component {
     title = ""
 
     render() {
-        this.style.backgroundImage = `url("${this.img}")`
+        this.style.backgroundImage = `url(${this.img})`
         return html`
             <h1>${this.title}</h1>
         `

@@ -106,8 +106,15 @@ export class ParagraphImageButton extends Component {
         margin-top: 10%;
       }
       @media only screen and (max-width: 810px) {
-          div {
+          .content {
               grid-template-columns: 1fr 1fr;
+          }
+      }
+      @media only screen and (max-width: 600px) {
+          .content {
+              display: flex;
+              flex-direction: column-reverse;
+              gap: 64px;
           }
       }
     `

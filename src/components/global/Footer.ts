@@ -50,6 +50,14 @@ export class Footer extends Component {
               display: none;
           }
       }
+      @media only screen and (max-width: 600px) {
+          div {
+              display: flex;
+              flex-direction: column;
+              gap: 64px;
+          }
+      }
+        
     `
 
     @property({type: String})
