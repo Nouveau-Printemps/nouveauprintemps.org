@@ -46,6 +46,12 @@ class Container extends Component {
                 padding: 30vh 15%;
             }
         }
+        @media only screen and (max-width: 510px) {
+            :host {
+                padding: 30vh 5%;
+                font-size: 14px;
+            }
+        }
     `
     @property({type: String})
     img = ""
