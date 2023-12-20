@@ -23,9 +23,27 @@ export class MentionsLegales extends Component {
                     Le code source des sites est protégé par la licence AGPL-3.0-or-later, sauf mention contraire.
                 </p>
                 <p>
-                    Certaines images utilisées proviennent d'<a href="https://unsplash.com/" target="_blank">Unsplash</a>.
-                    Ces images sont repérables à l'aide de leur nom alternatif contenant "Unsplash".
+                    Liste des images utilisées :
                 </p>
+                <ul>
+                    <li>Nos Revendications - photo de l'entête de Yoksel Zok, licence Unsplash</li>
+                    <li>Nos Revendications - photo "Renouveau démocratique" de Logan Weaver, licence Unsplash</li>
+                    <li>Nos Revendications - photo "Lutte écologique" de Markus Spiske, licence Unsplash</li>
+                    <li>Nos Revendications - photo "Renouveau social et économique" de Kalea Morgan, licence Unsplash</li>
+                    <li>Nous Rejoindre - photo de l'entête par Jason Blackeye, licence Unsplash</li>
+                    <li>Nos Réseaux - photo de l'entête par Pawel Czerwinski, licence Unsplash</li>
+                    <li>Mentions Légales - photo de l'entête par Mathew Schwartz, licence Unsplash</li>
+                    <li>Oh non, un 404 - photo de l'entête par Andrew Neel, licence Unsplash</li>
+                </ul>
+                <p>
+                    Liste des icons utilisées :
+                </p>
+                <ul>
+                    <li>Nos Réseaux - logo de Discord</li>
+                    <li>Nos Réseaux - logo de Mastodon</li>
+                    <li>Nos Réseaux - logo de YouTube</li>
+                    <li>Nos Réseaux - logo de PeerTube</li>
+                </ul>
             </g-paragraph>
             <g-paragraph title="Hébergement" color="white">
                 <p>
