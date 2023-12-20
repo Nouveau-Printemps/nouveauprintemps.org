@@ -116,6 +116,9 @@ export class ParagraphImageButton extends Component {
               flex-direction: column-reverse;
               gap: 64px;
           }
+          .left {
+              flex-direction: column;
+          }
       }
     `
 

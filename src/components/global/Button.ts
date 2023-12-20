@@ -65,7 +65,19 @@ export class SimpleButton extends Component {
         animation: on 1s ease-in-out;
         animation-fill-mode: forwards;
       }
-      
+        @media only screen and (max-width: 810px) {
+            div {
+                font-size: 26px;
+            }
+        }
+        @media only screen and (max-width: 510px) {
+            div {
+                margin-left: 5%;
+                margin-right: 5%;
+                font-size: 24px;
+                text-align: center;
+            }
+        }
       @keyframes on {
         from {
           width: 0;
@@ -83,11 +95,6 @@ export class SimpleButton extends Component {
           left: 100%;
           width: 0;
         }
-      }
-      @media only screen and (max-width: 810px) {
-          div {
-              font-size: 26px;
-          }
       }
     `
 
