@@ -80,12 +80,12 @@ export class GlobalNavbar extends Component {
             #hamburger.is-enabled ~ nav {
                 display: flex;
                 position: absolute;
-                top: 15%;
+                top: calc(50px + 2*16px);
                 flex-direction: column;
                 margin: 0 auto 0 auto;
                 justify-content: center;
                 width: 100%;
-                height: 85%;
+                height: calc(100% - 50px - 2*16px);
                 background: var(--color-green);
                 gap: 10%;
             }
