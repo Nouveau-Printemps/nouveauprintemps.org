@@ -11,7 +11,7 @@ export class Reseaux extends Component {
     render() {
         return html`
             <g-header title="Nos Réseaux" img="/img/abstract-colors-white.webp"></g-header>
-            <g-pib title="Discord" color="green" img="/icons/brands/discord.svg">
+            <g-pib title="Discord" color="green" img="/icons/brands/discord.svg" link="https://discord.gg/TTucdtkRfV">
                 <p>
                     Véritable QG numérique, Discord est le lieu où nous sommes tous.
                     On y organise souvent des débats et des réunions publiques pour que quiconque puisse donner son 
@@ -21,7 +21,8 @@ export class Reseaux extends Component {
                     Discord est notre réseau le plus important.
                 </p>
             </g-pib>
-            <g-pib title="Mastodon" color="dark" left img="/icons/brands/mastodon.svg">
+            <g-pib title="Mastodon" color="dark" left img="/icons/brands/mastodon.svg" 
+                   link="https://mastodon.social/@nouveauprintemps">
                 <p>
                     Mastodon est l'alternative libre de Twitter.
                     Toutes les infos importantes y sont relayées.
