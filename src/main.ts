@@ -6,13 +6,13 @@ import './assets/reset.css'
 import {NousRejoindre} from "./components/pages/NousRejoindre.ts";
 import {NotFound} from "./components/pages/NotFound.ts";
 import {NosRevendications} from "./components/pages/NosRevendications.ts";
-import {LitElement} from "lit";
 import {Reseaux} from "./components/pages/Reseaux.ts";
 import {MentionsLegales} from "./components/pages/MentionsLegales.ts";
+import {Component} from "./components/Component.ts";
 
 const router = new Router()
 
-function routeGenerator(element: LitElement, title: string): Route {
+function routeGenerator(element: Component, title: string): Route {
     const route: Route = {
         title: title,
         element: element
