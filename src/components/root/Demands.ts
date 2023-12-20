@@ -22,13 +22,13 @@ export class RootDemands extends Component {
     `
     render() {
         return html`
-            <r-demand src="https://placehold.co/300x300" alt="Temp">
+            <r-demand src="img/parliament-tiny.webp" alt="Parlement européen - Unsplash">
                 Mettre en place une démocratie novatrice et respectueuse
             </r-demand>
-            <r-demand src="https://placehold.co/300x300" alt="Temp" left>
+            <r-demand src="/img/one-world-tiny.webp" alt="One World - Unsplash" left>
                 Lutter contre le changement climatique
             </r-demand>
-            <r-demand src="https://placehold.co/300x300" alt="Temp">
+            <r-demand src="/img/medics-tiny.webp" alt="Personnel du SAMU en intervention - Unsplash">
                 Remettre le citoyen au centre des politiques et actions
             </r-demand>
             <simple-button href="/nos-revendications">Lire la version longue</simple-button>
@@ -81,6 +81,7 @@ class Demand extends Component {
       }
       img {
         ${shadowImg};
+          width: 100%;
       }
       @media only screen and (max-width: 810px) {
           div {

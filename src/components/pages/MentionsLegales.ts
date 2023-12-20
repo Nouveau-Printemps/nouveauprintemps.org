@@ -26,10 +26,14 @@ export class MentionsLegales extends Component {
                     Liste des images utilisées :
                 </p>
                 <ul>
+                    <li>Accueil - photo dans "Mettre en place une démocratie novatrice et respectueuse" de Marius Oprea, licence Unsplash</li>
+                    <li>Accueil - photo dans "Lutter contre le changement climatique" de Markus Spiske, licence Unsplash</li>
+                    <li>Accueil - photo dans "Remettre le citoyen au centre des politiques et actions" de Mat Napo, licence Unsplash</li>
+                    <li>Accueil - photo dans "Qui sommes-nous ?" de Clay Banks, licence Unsplash</li>
                     <li>Nos Revendications - photo de l'entête de Yoksel Zok, licence Unsplash</li>
-                    <li>Nos Revendications - photo "Renouveau démocratique" de Logan Weaver, licence Unsplash</li>
-                    <li>Nos Revendications - photo "Lutte écologique" de Markus Spiske, licence Unsplash</li>
-                    <li>Nos Revendications - photo "Renouveau social et économique" de Kalea Morgan, licence Unsplash</li>
+                    <li>Nos Revendications - photo dans "Renouveau démocratique" de Logan Weaver, licence Unsplash</li>
+                    <li>Nos Revendications - photo dans "Lutte écologique" de Markus Spiske, licence Unsplash</li>
+                    <li>Nos Revendications - photo dans "Renouveau social et économique" de Kalea Morgan, licence Unsplash</li>
                     <li>Nous Rejoindre - photo de l'entête par Jason Blackeye, licence Unsplash</li>
                     <li>Nos Réseaux - photo de l'entête par Pawel Czerwinski, licence Unsplash</li>
                     <li>Mentions Légales - photo de l'entête par Mathew Schwartz, licence Unsplash</li>

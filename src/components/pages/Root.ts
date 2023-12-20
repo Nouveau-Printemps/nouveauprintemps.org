@@ -4,7 +4,6 @@ import {Component} from "../Component.ts";
 
 import '../root/Header.ts'
 import '../root/Demands.ts'
-import '../root/About.ts'
 import '../global/Footer.ts'
 
 @customElement('r-page')
@@ -13,7 +12,8 @@ export class Root extends Component {
         return html`
             <r-header></r-header>
             <r-demands></r-demands>
-            <g-pib title="Qui sommes-nous ?" color="white" btn="Nous Rejoindre" shadowImage link="/nous-rejoindre">
+            <g-pib title="Qui sommes-nous ?" color="white" btn="Nous Rejoindre" link="/nous-rejoindre" 
+                   img="/img/cosy-tiny.webp" alt="Cosy - Unsplash">
                 <p>
                     Révolté par l'inaction politique, nous sommes un groupe de jeunes qui ont décidé de reprendre leur
                     futur en main.

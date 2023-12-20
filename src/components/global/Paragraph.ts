@@ -97,7 +97,7 @@ export class ParagraphImageButton extends Component {
       }
       img {
         margin: 0 auto;
-        width: 40%;
+        width: 100%;
       }
       .shadow {
         ${shadowImg};
