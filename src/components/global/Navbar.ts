@@ -69,7 +69,9 @@ export class GlobalNavbar extends Component {
           font-weight: bold;
       }
       img {
+        display: block;
         margin: 0 0 0 10%;
+        padding: 0 auto 0 auto;
       }
         @media only screen and (max-width: 970px) {
             #hamburger {
@@ -110,7 +112,7 @@ export class GlobalNavbar extends Component {
                 <span></span>
                 <span></span>
             </div>
-            <img src="https://placehold.co/150x50" alt="Logo">
+            <img src="/icons/logo.svg" alt="Logo" height=50>
             <nav>
                 <a href="/">Accueil</a>
                 <a href="/nos-revendications">Nos Revendications</a>

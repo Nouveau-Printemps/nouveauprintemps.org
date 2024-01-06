@@ -38,6 +38,11 @@ export class Footer extends Component {
       p {
         font-size: 1.1em;
       }
+      img {
+        display: block;
+        margin-right: auto;
+        margin-left: auto; 
+      }
       @media only screen and (max-width: 810px) {
           div {
               grid-template-columns: 1fr 1fr;
@@ -67,7 +72,7 @@ export class Footer extends Component {
         this.style.background = this.genColor(this.color)
         return html`
             <div class=${this.color == "dark" ? "dark" : ""}>
-                <img src="https://placehold.co/250x100" alt="Logo">
+                <img src="/icons/logo.svg" alt="Logo" height=100>
                 <div class="list">
                     <a href="/">Accueil</a>
                     <a href="https://blog." target="_blank" ">Blog</a>
