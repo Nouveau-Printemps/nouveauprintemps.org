@@ -21,16 +21,8 @@ export class NosRevendications extends Component {
             </g-header>
             <g-paragraph title="Présentation" color="dark">
                 <p>
-                    L'ensemble de nos revendications s'axe autour d'une thématique globale : <span class="bold">le renouveau des institutions</span>.
-                </p>
-                <p>
-                    Chez Nouveau Printemps, nous souhaitons réellement reconstruire le monde pour le rendre enfin viable.
-                    Si vous êtes en accord avec nos principes et revendications, n'hésitez pas à
-                    <a href="/nous-rejoindre">nous rejoindre</a>.
-                </p>
-                <p>
-                    Ces revendications ne sont pas triées par importance : on était obligé de le faire pour
-                    les présenter correctement.
+                    L'ensemble de nos revendications s'axe autour d'une thématique globale : 
+                    <span class="bold">le renouveau des institutions</span>.
                 </p>
             </g-paragraph>
             <g-paragraph title="Renouveau démocratique" color="white" img="/img/we-demand-justice-tiny.webp" 
