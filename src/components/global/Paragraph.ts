@@ -39,6 +39,10 @@ export class GlobalParagraph extends Component {
             margin-right: auto;
             margin-bottom: 5rem;
         }
+        .is-important {
+            font-size: 1.75rem;
+            font-weight: bold;
+        }
     `
 
     @property({type: String})

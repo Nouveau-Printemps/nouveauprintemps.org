@@ -78,25 +78,10 @@ export class RootHeader extends Component {
 
     // Render the UI as a function of component state
     render() {
-        const cookies = document.cookie.split(";")
-        let popup = false
-        cookies.forEach(c => {
-            if (c.trim().startsWith("popup=")) {
-                popup = c.split("=")[1].trim() == "true"
-            }
-        })
-        if (navigator.userAgent.search("Firefox") > -1 && !popup) {
-            window.alert("Nous jouons automatiquement une vidéo en arrière plan, sauf qu'elle est bloquée par défaut " +
-                "sur Firefox. Pour l'activer, suivez ce lien :\nhttps://support.mozilla.org/fr/kb/autoriser-bloquer-lecture-automatique-medias")
-            const date = new Date(Date.now())
-            date.setMonth((date.getMonth()+1)%12)
-            console.log(date.toISOString())
-            document.cookie = `popup=true; expires=${date.toISOString()}`
-        }
         return html`
             <header>
                 <div class="container">
-                    <video autoplay muted loop>
+                    <video onloadeddata="this.muted = true; this.play()" preload playsinline muted loop>
                         <source src="/videos/placeholder.mp4">
                     </video>
                 </div>
