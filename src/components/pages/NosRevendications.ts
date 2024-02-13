@@ -106,7 +106,7 @@ export class NosRevendications extends Component {
                     Limiter les dividendes à 1 milliard d'euros.
                 </p>
                 <p>
-                    Mettre en place un salaire universel à 85% du salaire médian (environ 1900€) accessible à tous les
+                    Mettre en place un salaire universel à 85% du salaire médian (soit environ 1600€) accessible à tous les
                     travailleurs (salarié, professions indépendantes, homme et femme au foyer, etc.) et à tous les
                     malades.
                 </p>
