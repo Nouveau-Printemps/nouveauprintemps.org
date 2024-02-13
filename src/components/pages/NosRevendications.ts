@@ -54,33 +54,44 @@ export class NosRevendications extends Component {
                 <p>
                     Enlever l'obligation de libéraliser dans la Constitution européenne.
                 </p>
+                <p>
+                    Mettre en place une police de proximité faisant le lien avec les populations défavorisées.
+                </p>
+                <p>
+                    Créer une assemblée citoyenne à chaque évolution rapide de la société (apparition de l'IA). 
+                </p>
             </g-paragraph>
             <g-paragraph title="Lutte écologique" color="green" img="/img/climate-justice-now-tiny.webp" 
                          alt="Climate Justice Now - Unsplash">
                 <p>
-                    La Cour Internationale de Justice doit condamner pour crime contre l'humanité l'ensemble des personnes
-                    morales ou physiques ayant empêché à grande échelle l'établissement du consensus. 
+                    Financer le développement de moyen de transport collectif public (covoiturage, bus, métro, rer, ter,
+                    tgv) et taxer les transports individuels (voiture) et les transports polluants (bateau, avion).
+                </p>
+                <p class="is-important">
+                    Créer des centres de réparation dans toutes les villes de plus de 10.000 habitants.
+                </p>
+                <p>
+                    Interdire à la vente tous les produits non réparables.
+                </p>
+                <p>
+                    Taxer proportionnellement le consumérisme.
+                </p>
+                <p>
+                    Limiter progressivement la consommation d'électricité, d'eau et de gaz.
+                </p>
+                <p>
+                    Remplacer les anciens moyens de productions d'énergie (usine à gaz, charbon, pétrole) par de nouveaux
+                    moyens plus neutres et renouvelables (solaire, éolien, aquatique). 
+                </p>
+                <p>
+                    Investir dans le développement de nouvelles technologies de stockage et de production.
+                </p>
+                <p>
+                    Continuer d'entretenir nos centrales nucléaires sans en construire de nouvelles.
                 </p>
             </g-paragraph>
             <g-paragraph title="Renouveau social et économique" color="white" img="/img/no-justice-no-peace-tiny.webp" 
                          alt="No Justice No Peace - Unsplash">
-                <p>
-                    Le gouvernement, les élu⋅es et les entreprises doivent reconnaître que le tout individuel empêche
-                    toute évolution sociétale.
-                </p>
-                <p>
-                    Ils et elles doivent arrêter de rechercher le profit à tout prix. 
-                </p>
-                <p>
-                    Ils et elles doivent reconnaître que toute vie humaine a droit au confort, peu importe ses origines,
-                    son revenu et sa culture. Et ils et elles doivent reconnaître qu'il est injuste d'imposer une vie à
-                    un humain en fonction de critère qu'il ne peut influer (classe sociale d'origine, couleur de peau, 
-                    etc.).
-                </p>
-                <p>
-                    Ils et elles doivent rémunérer non plus exclusivement en fonction des compétences, mais doivent aussi
-                    prendre en compte la pénibilité et l'importance du travail.
-                </p>
             </g-paragraph>
             <simple-button href="/nous-rejoindre" light>Rejoignez nous</simple-button>
             <g-footer color="dark"></g-footer>
