@@ -92,6 +92,30 @@ export class NosRevendications extends Component {
             </g-paragraph>
             <g-paragraph title="Renouveau social et économique" color="white" img="/img/no-justice-no-peace-tiny.webp" 
                          alt="No Justice No Peace - Unsplash">
+                <p>
+                    Limiter la quantité d'argent à 50 millions d'euros par foyer.
+                </p>
+                <p class="is-important">
+                    Adapter les salaires uniquement en fonction de la volonté, de la pénibilité et de la nécessité du
+                    travail.
+                </p>
+                <p>
+                    Interdire tout héritage dépassant 10.000€.
+                </p>
+                <p>
+                    Limiter les dividendes à 1 milliard d'euros.
+                </p>
+                <p>
+                    Mettre en place un salaire universel à 85% du salaire médian (environ 1900€) accessible à tous les
+                    travailleurs (salarié, professions indépendantes, homme et femme au foyer, etc.) et à tous les
+                    malades.
+                </p>
+                <p>
+                    Augmenter le budget de la Santé, rénover les hôpitaux, augmenter les effectifs.
+                </p>
+                <p>
+                    Modifier le fonctionnement des entreprises privées : 50% détenteurs du capital, 50% salariés.
+                </p>
             </g-paragraph>
             <simple-button href="/nous-rejoindre" light>Rejoignez nous</simple-button>
             <g-footer color="dark"></g-footer>
