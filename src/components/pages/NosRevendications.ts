@@ -28,34 +28,35 @@ export class NosRevendications extends Component {
             <g-paragraph title="Renouveau démocratique" color="white" img="/img/we-demand-justice-tiny.webp" 
                          alt="We Demand Justice + Change - Unsplash">
                 <p>
-                    Le gouvernement, les élu⋅es et les entreprises doivent reconnaître l'importance d'avoir un mode de
-                    fonctionnement transparent. Il s'agit de l'unique manière de garantir nos droits et libertés tout en
-                    contrôlant ces groupements.
+                    Toutes actions de l'État (gouvernement, assemblés, Justice) doivent être rendus publiques et facilement
+                    accessibles.
+                </p>
+                <p class="is-important">
+                    L'ensemble des mandats politiques doivent devenir unique.
                 </p>
                 <p>
-                    Ils et elles doivent reconnaître deux nouveaux pouvoirs : les pouvoirs médiatique et économique.
+                    Ajout dans la Constitution de deux autres formes de pouvoir : le pouvoir économique et le pouvoir 
+                    médiatique. 
                 </p>
                 <p>
-                    Ils et elles doivent accepter de changer de régime politique pour un plus adapté à la situation 
-                    actuelle. Ce changement aura comme objectif de remettre le citoyen au centre des actions en l'écoutant
-                    et en le considérant beaucoup plus.
+                    Ajout du Référendum d'Initiative Citoyenne (RIC) dans la Constitution.
+                </p>
+                <p>
+                    Créer un droit permettant à n'importe quel citoyen de prendre rendez-vous avec son député.
+                </p>
+                <p>
+                    Créer un droit permettant à n'importe quel citoyen de lancer un référendum dans sa
+                    circonscription. Le résultat de ce référendum devra être suivi par le député.
+                </p>
+                <p>
+                    Ne plus reposer les services publics sur des entreprises privées.
+                </p>
+                <p>
+                    Enlever l'obligation de libéraliser dans la Constitution européenne.
                 </p>
             </g-paragraph>
             <g-paragraph title="Lutte écologique" color="green" img="/img/climate-justice-now-tiny.webp" 
                          alt="Climate Justice Now - Unsplash">
-                <p>
-                    Le gouvernement, les élu⋅es et les entreprises doivent reconnaître l'enjeu climatique planétaire.
-                </p>
-                <p>
-                    Ils et elles doivent reconnaître leur rôle à jouer dans cette crise et ainsi mettre en place des actions
-                    fortes pour lutter activement contre. 
-                </p>
-                <p>
-                    Ils et elles doivent informer la population avec transparence sur la gravité de la situation. 
-                </p>
-                <p>
-                    Ils et elles doivent condamner l'ensemble des actions allant contre cette lutte.
-                </p>
                 <p>
                     La Cour Internationale de Justice doit condamner pour crime contre l'humanité l'ensemble des personnes
                     morales ou physiques ayant empêché à grande échelle l'établissement du consensus. 
