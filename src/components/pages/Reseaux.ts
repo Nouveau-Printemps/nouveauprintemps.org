@@ -32,7 +32,7 @@ export class Reseaux extends Component {
                     réseau. 
                 </p>
             </g-pib>
-            <g-pib title="Blog" color="green" img="/icons/brands/youtube.svg"
+            <g-pib title="Blog" color="green" img="/icons/logo.svg"
                    link="https://blog.nouveauprintemps.org">
                 <p>
                     Notre blog relaye toutes les informations essentielles : compte-rendus de débats, d'actions, prises
