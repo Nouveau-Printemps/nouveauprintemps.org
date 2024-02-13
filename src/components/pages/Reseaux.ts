@@ -22,7 +22,7 @@ export class Reseaux extends Component {
                 </p>
             </g-pib>
             <g-pib title="Mastodon" color="dark" left img="/icons/brands/mastodon.svg" 
-                   link="https://mastodon.social/@nouveauprintemps">
+                   link="https://social.nouveauprintemps.org/@nouveauprintemps">
                 <p>
                     Mastodon est l'alternative libre de Twitter.
                     Toutes les infos importantes y sont relayées.
