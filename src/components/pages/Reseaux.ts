@@ -32,7 +32,17 @@ export class Reseaux extends Component {
                     réseau. 
                 </p>
             </g-pib>
-            <g-pib title="YouTube" color="green" img="/icons/brands/youtube.svg">
+            <g-pib title="Blog" color="green" img="/icons/brands/youtube.svg"
+                   link="https://blog.nouveauprintemps.org">
+                <p>
+                    Notre blog relaye toutes les informations essentielles : compte-rendus de débats, d'actions, prises
+                    de positions ou encore annonces.
+                </p>
+                <p>
+                    Vous pouvez vous abonner aux flux RSS de n'importe quel page en rajoutant /rss/ derrière l'URL ! 
+                </p>
+            </g-pib>
+            <g-pib title="YouTube" color="dark" left img="/icons/brands/youtube.svg">
                 <p>
                     YouTube est l'un de deux moyens de diffusion vidéo que nous utilisons.
                     Toutes les vidéos importantes y seront diffusées, même si, certaines fois, elles seront censurées pour
@@ -42,7 +52,7 @@ export class Reseaux extends Component {
                     Le contenu posté sera essentiellement constitué de présentations, de trailers et de "clip".
                 </p>
             </g-pib>
-            <g-pib title="PeerTube" color="dark" left img="/icons/brands/peertube.svg">
+            <g-pib title="PeerTube" color="green" img="/icons/brands/peertube.svg">
                 <p>
                     Deuxième manière de diffusion vidéo que nous utilisons, PeerTube est l'alternative libre de YouTube.
                     Le principal avantage de PeerTube est l'absence de censure politique nous concernant.
