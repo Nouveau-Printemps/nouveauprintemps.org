@@ -28,18 +28,18 @@ export class NosRevendications extends Component {
             <g-paragraph title="Renouveau démocratique" color="white" img="/img/we-demand-justice-tiny.webp" 
                          alt="We Demand Justice + Change - Unsplash">
                 <p>
-                    Toutes actions de l'État (gouvernement, assemblés, Justice) doivent être rendus publiques et facilement
-                    accessibles.
+                    Ajouter dans la Constitution que toutes actions de l'État (gouvernement, assemblés, Justice) doivent
+                    être rendus publiques et facilement accessibles 24h après l'acte.
                 </p>
                 <p class="is-important">
-                    L'ensemble des mandats politiques doivent devenir unique.
+                    Ajouter dans la Constitution que les mandats politiques sont uniques.
                 </p>
                 <p>
-                    Ajout dans la Constitution de deux autres formes de pouvoir : le pouvoir économique et le pouvoir 
+                    Ajouter dans la Constitution deux autres formes de pouvoir : le pouvoir économique et le pouvoir 
                     médiatique. 
                 </p>
                 <p>
-                    Ajout du Référendum d'Initiative Citoyenne (RIC) dans la Constitution.
+                    Ajouter le Référendum d'Initiative Citoyenne (RIC) dans la Constitution.
                 </p>
                 <p>
                     Créer un droit permettant à n'importe quel citoyen de prendre rendez-vous avec son député.
