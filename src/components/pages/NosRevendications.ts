@@ -64,17 +64,21 @@ export class NosRevendications extends Component {
             <g-paragraph title="Lutte écologique" color="green" img="/img/climate-justice-now-tiny.webp" 
                          alt="Climate Justice Now - Unsplash">
                 <p>
-                    Financer le développement de moyen de transport collectif public (covoiturage, bus, métro, rer, ter,
-                    tgv) et taxer les transports individuels (voiture) et les transports polluants (bateau, avion).
-                </p>
-                <p class="is-important">
-                    Créer des centres de réparation dans toutes les villes de plus de 10.000 habitants.
-                </p>
-                <p>
                     Interdire à la vente tous les produits non réparables.
                 </p>
                 <p>
                     Taxer proportionnellement le consumérisme.
+                </p>
+                <p>
+                    Créer des centres de réparation dans toutes les villes de plus de 10.000 habitants.
+                </p>
+                <p class="is-important">
+                    Recréer une vie urbaine dynamique et arrêter de concevoir l'urbanisme des villes et campagnes autour
+                    de la voiture individuelle.
+                </p>
+                <p>
+                    Financer la construction de piste cyclable, réduire la taille des voies, limiter le nombre de 
+                    voitures, mettre en place et rénover les transports publics.
                 </p>
                 <p>
                     Limiter progressivement la consommation d'électricité, d'eau et de gaz.
@@ -114,7 +118,8 @@ export class NosRevendications extends Component {
                     Augmenter le budget de la Santé, rénover les hôpitaux, augmenter les effectifs.
                 </p>
                 <p>
-                    Modifier le fonctionnement des entreprises privées : 50% détenteurs du capital, 50% salariés.
+                    Modifier la gouvernance des entreprises publiques (conseil de directions avec une majorité d'usagers)
+                    et privées (conseil de directions avec une majorité d'employés ou de représentants d'employés).
                 </p>
             </g-paragraph>
             <simple-button href="/nous-rejoindre" light>Rejoignez nous</simple-button>
