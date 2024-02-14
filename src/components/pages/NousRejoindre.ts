@@ -22,21 +22,17 @@ export class NousRejoindre extends Component {
                 <p>
                     Nouveau Printemps n'est ni une association, ni un syndicat, ni une entreprise, ni aucune autre forme
                     légale.
-                    Nous sommes uniquement un mouvement né d'une idée. 
                 </p>
                 <p>
-                    Comme nous ne sommes rien légalement parlant, il n'y a aucune manière officielle de nous rejoindre, et 
-                    nous ne comptons pas en créer.
-                    Nous cherchons avant tout des personnes qui adhèrent à nos valeurs, à nos idées et à nos revendications.
+                    Nous sommes uniquement un mouvement né d'une idée.
                 </p>
             </g-paragraph>
-            <g-paragraph title="Participez à nos actions" color="green">
+            <g-paragraph title="Participer à nos actions" color="green">
                 <p>
-                    Si vous croyez en nos revendications et que vous souhaitez améliorer notre monde, hésitez pas à participer
-                    à nos actions.
+                    La manière la plus simple de nous aider est de participer à nos actions.
                 </p>
                 <p>
-                    N'hésitez pas à nous suivre sur nos <a href="/reseaux">réseaux</a> pour être informé de nos dernières actions.
+                    Suivez-nous sur nos <a href="/reseaux">réseaux</a> pour que l'on puisse vous en informer !
                 </p>
             </g-paragraph>
             <g-paragraph title="Rejoindre l'équipe" color="white">
@@ -45,9 +41,8 @@ export class NousRejoindre extends Component {
                     Alors, rejoignez notre équipe !
                 </p>
                 <p>
-                    N'hésitez pas à nous contacter sur n'importe lequel de nos <a href="/reseaux">réseaux</a>.
-                    Une seule condition : avoir Discord car, actuellement, il s'agit de la plateforme qui nous regroupe 
-                    tous.
+                    Contactez-nous sur un de nos <a href="/reseaux">réseaux</a>.
+                    Une seule condition : avoir Discord.
                 </p>
             </g-paragraph>
             <simple-button href="/reseaux" light>Nos réseaux</simple-button>
