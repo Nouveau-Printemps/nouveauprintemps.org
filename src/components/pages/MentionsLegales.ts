@@ -54,7 +54,7 @@ export class MentionsLegales extends Component {
                     L'hébergement de ces sites webs est assuré par :
                 </p>
                 <ul>
-                    <li>Contabo GmbH</li>
+                    <li>Infomaniak Network SA (25 Rue Eugène Marziano, Genève, Suisse)</li>
                 </ul>
                 <p>
                     Le propriétaire et l'hébergeur du site ne pourront être tenu comme responsable si le site ne s'aurait
@@ -72,6 +72,12 @@ export class MentionsLegales extends Component {
                     Nous utilisons aussi l'outil de statistique de CloudFlare, Inc 
                     (<a href="https://www.cloudflare.com/en-en/privacypolicy/" target="_blank">politique de 
                     confidentialité</a>) qui n'est pas désactivable puisqu'il n'identifie pas l'utilisateur.
+                </p>
+                <p>
+                    Nouveau Printemps Social (qui est disponible à l'adresse suivante https://social.nouveauprintemps.org)
+                    possède sa propre politique de confidentialité qui est accessible 
+                    <a href="https://social.nouveauprintemps.org/@nouveauprintemps/pages/privacy-policy" target="_blank">
+                        ici</a>.
                 </p>
             </g-paragraph>
             <g-footer color="green"></g-footer>
