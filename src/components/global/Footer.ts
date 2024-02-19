@@ -79,7 +79,7 @@ export class Footer extends Component {
                 </div>
                 <p>
                     &copy; 2023 - Nouveau Printemps<br>
-                    Contenu sous CC-BY-SA 4.0<br>
+                    Contenu sous CC-BY-SA-NC 4.0<br>
                     Code source sous AGPLv3
                 </p>
             </div>
