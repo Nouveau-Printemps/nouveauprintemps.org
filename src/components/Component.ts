@@ -1,156 +1,156 @@
-import {CSSResultGroup, LitElement, css} from "lit";
-import {textColor} from "./statics.ts";
+import { CSSResultGroup, LitElement, css } from "lit";
+import { textColor } from "./statics.ts";
 
 export abstract class Component extends LitElement {
-    private static _styles: CSSResultGroup;
+  private static _styles: CSSResultGroup;
 
-    static get styles(): CSSResultGroup {
-        const derivedStyles = this._styles || [];
-        return [
-            resetCSS,
-            globalCSS,
-            ...(Array.isArray(derivedStyles) ? derivedStyles : [derivedStyles]),
-        ];
-    }
+  static get styles(): CSSResultGroup {
+    const derivedStyles = this._styles || [];
+    return [
+      resetCSS,
+      globalCSS,
+      ...(Array.isArray(derivedStyles) ? derivedStyles : [derivedStyles]),
+    ];
+  }
 
-    static set styles(styles: CSSResultGroup) {
-        this._styles = styles;
-    }
+  static set styles(styles: CSSResultGroup) {
+    this._styles = styles;
+  }
 
-    protected content(): string {
-        const content = this.innerHTML
-        const regex = /<!--.*-->/g
-        return content.replace(regex, "").trim()
-    }
+  protected content(): string {
+    const content = this.innerHTML;
+    const regex = /<!--.*-->/g;
+    return content.replace(regex, "").trim();
+  }
 
-    protected genColor(color: string): string {
-        return `var(--color-${color})`
-    }
+  protected genColor(color: string): string {
+    return `var(--color-${color})`;
+  }
 }
 
 const globalCSS = css`
   @font-face {
-    font-family: 'Abril';
+    font-family: "Abril";
     font-weight: 400;
     src: url("/fonts/abril/AbrilFatface-Regular.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Lato';
+    font-family: "Lato";
     font-weight: 100;
     src: url("/fonts/lato/Lato-Thin.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Lato';
+    font-family: "Lato";
     font-weight: 100;
     font-style: italic;
     src: url("/fonts/lato/Lato-ThinItalic.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Lato';
+    font-family: "Lato";
     font-weight: 300;
     src: url("/fonts/lato/Lato-Light.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Lato';
+    font-family: "Lato";
     font-weight: 300;
     font-style: italic;
     src: url("/fonts/lato/Lato-LightItalic.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Lato';
+    font-family: "Lato";
     font-weight: 400;
     src: url("/fonts/lato/Lato-Regular.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Lato';
+    font-family: "Lato";
     font-weight: 400;
     font-style: italic;
     src: url("/fonts/lato/Lato-Italic.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Lato';
+    font-family: "Lato";
     font-weight: 700;
     src: url("/fonts/lato/Lato-Bold.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Lato';
+    font-family: "Lato";
     font-weight: 700;
     font-style: italic;
     src: url("/fonts/lato/Lato-BoldItalic.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Lato';
+    font-family: "Lato";
     font-weight: 900;
     src: url("/fonts/lato/Lato-Black.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Lato';
+    font-family: "Lato";
     font-weight: 900;
     font-style: italic;
     src: url("/fonts/lato/Lato-BlackItalic.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 100;
     src: url("/fonts/raleway/Raleway-Thin.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 100;
     font-style: italic;
     src: url("/fonts/raleway/Raleway-ThinItalic.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 300;
     font-style: italic;
     src: url("/fonts/raleway/Raleway-LightItalic.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 300;
     src: url("/fonts/raleway/Raleway-Light.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 400;
     src: url("/fonts/raleway/Raleway-Regular.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 400;
     font-style: italic;
     src: url("/fonts/raleway/Raleway-Italic.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 600;
     src: url("/fonts/raleway/Raleway-SemiBold.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 600;
     font-style: italic;
     src: url("/fonts/raleway/Raleway-SemiBoldItalic.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 700;
     font-style: italic;
     src: url("/fonts/raleway/Raleway-BoldItalic.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 700;
     src: url("/fonts/raleway/Raleway-Bold.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 900;
     src: url("/fonts/raleway/Raleway-Black.ttf") format("truetype");
   }
   @font-face {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 900;
     font-style: italic;
     src: url("/fonts/raleway/Raleway-BlackItalic.ttf") format("truetype");
@@ -166,26 +166,27 @@ const globalCSS = css`
     --br-mid: 600px;
     --br-tiny: 510px;
   }
-    
-    .is-disabled {
-        display: none;
-    }
+
+  .is-disabled {
+    display: none;
+  }
 
   body {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     ${textColor};
   }
-  
-  p, li {
-    font-family: 'Lato', sans-serif;
+
+  p,
+  li {
+    font-family: "Lato", sans-serif;
     font-size: 1.5em;
   }
-  
+
   ul {
     list-style-type: disc;
     list-style-position: inside;
   }
-  
+
   .italic {
     font-style: italic;
   }
@@ -194,11 +195,13 @@ const globalCSS = css`
   }
 
   a {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
   }
 
-  h1, h2, h3 {
-    font-family: 'Raleway', sans-serif;
+  h1,
+  h2,
+  h3 {
+    font-family: "Raleway", sans-serif;
     font-weight: 400;
   }
 
@@ -214,20 +217,22 @@ const globalCSS = css`
     font-size: 2em;
   }
   @media only screen and (max-width: 810px) {
-      h1,h2,h3 {
-          font-weight: 600;
-      }
-      h1 {
-          font-size: 2.5em;
-      }
-      h2 {
-          font-size: 2.25em;
-      }
-      h2 {
-          font-size: 1.75em;
-      }
+    h1,
+    h2,
+    h3 {
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 2.5em;
+    }
+    h2 {
+      font-size: 2.25em;
+    }
+    h2 {
+      font-size: 1.75em;
+    }
   }
-`
+`;
 
 const resetCSS = css`
   /* https://meyerweb.com/eric/tools/css/reset/ 
@@ -235,19 +240,87 @@ const resetCSS = css`
      License: none (public domain)
   */
 
-  html, body, div, span, applet, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-  a, abbr, acronym, address, big, cite, code,
-  del, dfn, em, img, ins, kbd, q, s, samp,
-  small, strike, strong, sub, sup, tt, var,
-  b, u, i, center,
-  dl, dt, dd, ol, ul, li,
-  fieldset, form, label, legend,
-  table, caption, tbody, tfoot, thead, tr, th, td,
-  article, aside, canvas, details, embed,
-  figure, figcaption, footer, header, hgroup,
-  menu, nav, output, ruby, section, summary,
-  time, mark, audio, video {
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -256,26 +329,39 @@ const resetCSS = css`
     vertical-align: baseline;
   }
   /* HTML5 display-role reset for older browsers */
-  article, aside, details, figcaption, figure,
-  footer, header, hgroup, menu, nav, section {
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
     display: block;
   }
   body {
     line-height: 1;
   }
-  ol, ul {
+  ol,
+  ul {
     list-style: none;
   }
-  blockquote, q {
+  blockquote,
+  q {
     quotes: none;
   }
-  blockquote:before, blockquote:after,
-  q:before, q:after {
-    content: '';
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: "";
     content: none;
   }
   table {
     border-collapse: collapse;
     border-spacing: 0;
   }
-`
+`;

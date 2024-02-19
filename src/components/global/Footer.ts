@@ -1,76 +1,75 @@
-import {Component} from "../Component.ts";
-import {customElement, property} from "lit/decorators.js";
-import {css, html} from "lit";
+import { Component } from "../Component.ts";
+import { customElement, property } from "lit/decorators.js";
+import { css, html } from "lit";
 
 @customElement("g-footer")
 export class Footer extends Component {
-    static styles = css`
-      :host {
-        padding: 10%;
-        display: block;
-      }
+  static styles = css`
+    :host {
+      padding: 10%;
+      display: block;
+    }
+    div {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10%;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .dark {
+      color: var(--color-light);
+    }
+    .list {
+      display: flex;
+      flex-direction: row;
+      gap: 10%;
+      justify-content: center;
+    }
+    a {
+      display: block;
+      color: var(--color-dark);
+      font-size: 1.25em;
+    }
+    .dark a {
+      color: var(--color-light);
+    }
+    p {
+      font-size: 1.1em;
+    }
+    img {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @media only screen and (max-width: 810px) {
       div {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 10%;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        text-align: center;
-      }
-      .dark {
-        color: var(--color-light)
+        grid-template-columns: 1fr 1fr;
       }
       .list {
-        display: flex;
-        flex-direction: row;
-        gap: 10%;
-        justify-content: center;
-      }
-      a {
-        display: block;
-        color: var(--color-dark);
-        font-size: 1.25em;
-      }
-      .dark a {
-        color: var(--color-light)
-      }
-      p {
-        font-size: 1.1em;
+        flex-direction: column;
+        gap: 12px;
       }
       img {
-        display: block;
-        margin-right: auto;
-        margin-left: auto; 
+        display: none;
       }
-      @media only screen and (max-width: 810px) {
-          div {
-              grid-template-columns: 1fr 1fr;
-          }
-          .list {
-              flex-direction: column;
-              gap: 12px;
-          }
-          img {
-              display: none;
-          }
+    }
+    @media only screen and (max-width: 600px) {
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
       }
-      @media only screen and (max-width: 600px) {
-          div {
-              display: flex;
-              flex-direction: column;
-              gap: 64px;
-          }
-      }
-        
-    `
+    }
+  `;
 
-    @property({type: String})
-    color = "green"
+  @property({ type: String })
+  color = "green";
 
-    render() {
-        this.style.background = this.genColor(this.color)
-        return html`
+  render() {
+    this.style.background = this.genColor(this.color);
+    return html`
             <div class=${this.color == "dark" ? "dark" : ""}>
                 <img src="/icons/logo.svg" alt="Logo" height=100>
                 <div class="list">
@@ -84,6 +83,6 @@ export class Footer extends Component {
                     Code source sous AGPLv3
                 </p>
             </div>
-        `
-    }
+        `;
+  }
 }
