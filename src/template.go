@@ -1,6 +1,7 @@
 package src
 
 import (
+	"embed"
 	"html/template"
 	"log/slog"
 	"net/http"
@@ -12,6 +13,7 @@ type Template interface {
 
 type TemplateData struct {
 	Title string
+	SEO   *SEOData
 }
 
 type SEOData struct {
@@ -31,18 +33,29 @@ var (
 		Description: "Nouveau Printemps 2024",
 		Domain:      "nouveauprintemps.org",
 	}
+	templates *template.Template
 )
 
+func Setup(fs *embed.FS) {
+	t := template.Must(template.ParseFS(fs, "base/*.gohtml"))
+	templates = template.Must(t.ParseFS(fs, "page/*.gohtml"))
+}
+
 func (t *HomeTemplate) Render(w http.ResponseWriter) {
-	seo := SEOData{
-		Title:       "Accueil",
-		URL:         "/",
-		Description: "",
+	data := TemplateData{
+		Title: "Accueil",
+		SEO: &SEOData{
+			Title:       "Accueil",
+			URL:         "/",
+			Description: "",
+		},
 	}
-	mergeSeoData(&seo)
-	err := template.Must(template.ParseFiles(
-		getFile("home"),
-	)).ExecuteTemplate(w, "base", seo)
+	renderTemplate(w, "home", &data)
+}
+
+func renderTemplate(w http.ResponseWriter, name string, data *TemplateData) {
+	mergeSeoData(data.SEO)
+	err := templates.ExecuteTemplate(w, "base", data)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		slog.Error("error while rendering template", "err", err.Error())

@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"embed"
 	"github.com/gorilla/mux"
 	"log/slog"
 	"net/http"
@@ -11,7 +12,12 @@ import (
 	"time"
 )
 
+//go:embed templates/*
+var templates embed.FS
+
 func main() {
+	src.Setup(&templates)
+
 	r := mux.NewRouter()
 
 	r.HandleFunc("/", src.HandleHome)
