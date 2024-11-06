@@ -15,12 +15,6 @@ import (
 //go:embed templates/*
 var templates embed.FS
 
-//go:embed public/*
-var static embed.FS
-
-//go:embed dist/*
-var assets embed.FS
-
 func main() {
 	src.Setup(&templates)
 
@@ -29,8 +23,8 @@ func main() {
 	r.HandleFunc("/", src.HandleHome)
 
 	// static files
-	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServerFS(static)))
-	r.PathPrefix("/assets/").Handler(http.StripPrefix("/assets/", http.FileServerFS(assets)))
+	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("./public"))))
+	r.PathPrefix("/assets/").Handler(http.StripPrefix("/assets/", http.FileServer(http.Dir("./dist"))))
 
 	srv := &http.Server{
 		Handler:      r,
