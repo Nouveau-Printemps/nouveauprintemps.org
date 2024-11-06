@@ -34,11 +34,13 @@ var (
 		Domain:      "nouveauprintemps.org",
 	}
 	templates *template.Template
+	files     *embed.FS
 )
 
 func Setup(fs *embed.FS) {
-	t := template.Must(template.ParseFS(fs, "base/*.gohtml"))
-	templates = template.Must(t.ParseFS(fs, "page/*.gohtml"))
+	files = fs
+	t := template.Must(template.ParseFS(fs, "templates/base/*.gohtml"))
+	templates = t
 }
 
 func (t *HomeTemplate) Render(w http.ResponseWriter) {
@@ -55,6 +57,7 @@ func (t *HomeTemplate) Render(w http.ResponseWriter) {
 
 func renderTemplate(w http.ResponseWriter, name string, data *TemplateData) {
 	mergeSeoData(data.SEO)
+	template.Must(templates.ParseFS(files, getFile(name)))
 	err := templates.ExecuteTemplate(w, "base", data)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
@@ -73,7 +76,7 @@ func mergeSeoData(s *SEOData) {
 }
 
 func getFile(path string) string {
-	return "templates/pages/" + path + ".gohtml"
+	return "templates/page/" + path + ".gohtml"
 }
 
 func getStaticPath(path string) string {
