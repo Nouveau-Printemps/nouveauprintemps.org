@@ -5,6 +5,7 @@ import (
 	"github.com/gorilla/mux"
 	"log/slog"
 	"net/http"
+	"nouveauprintemps.org/src"
 	"os"
 	"os/signal"
 	"time"
@@ -12,6 +13,8 @@ import (
 
 func main() {
 	r := mux.NewRouter()
+
+	r.HandleFunc("/", src.HandleHome)
 
 	// static files
 	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("./public"))))
