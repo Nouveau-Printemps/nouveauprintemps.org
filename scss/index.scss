@@ -1,5 +1,6 @@
 @use "../node_modules/normalize.css/normalize";
 @use "fonts";
+@use "colors";
 
 body {
   margin: 5% 20%;
@@ -8,4 +9,17 @@ body {
 
 h1, h2, h3 {
   font-family: "Faculty Glyphic", "serif";
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+a {
+  color: var(--important);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
