@@ -16,7 +16,7 @@ import (
 var templates embed.FS
 
 func main() {
-	src.Setup(&templates)
+	src.Files = &templates
 
 	r := mux.NewRouter()
 
