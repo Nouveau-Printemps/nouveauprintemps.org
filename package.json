@@ -3,7 +3,8 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "build-sass": "sass scss/index.scss dist/styles.css"
+    "build-sass": "sass --no-source-map --style=compressed scss/index.scss dist/styles.css",
+    "watch-sass": "sass --watch scss/index.scss dist/styles.css"
   },
   "devDependencies": {
     "@types/bun": "latest"
