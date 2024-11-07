@@ -1,5 +1,11 @@
 @use "../node_modules/normalize.css/normalize";
+@use "fonts";
 
 body {
   margin: 5% 20%;
+  font-family: "Poppins", "sans-serif";
+}
+
+h1, h2, h3 {
+  font-family: "Faculty Glyphic", "serif";
 }
