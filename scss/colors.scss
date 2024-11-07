@@ -2,7 +2,9 @@
   --text: #2B2D42;
   --background: #EDF2F4;
   --darker: #8D99AE;
+  --deep-dark: #282A3E;
   --important: #b9151a;
+  --dark-important: #80234A;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -10,6 +12,8 @@
     --text: #EDF2F4;
     --background: #2B2D42;
     --darker: #8D99AE;
-    --important: #eda0af;
+    --deep-dark: #282A3E;
+    --important: #EAB399;
+    --dark-important: #80234A;
   }
 }

@@ -30,7 +30,7 @@ type LegalTemplate struct{}
 var (
 	defaultSeoData = &SEOData{
 		Image:       getStaticPath(""),
-		Description: "Nouveau Printemps 2024",
+		Description: "Après la tempête, le Soleil finit toujours par se lever, et le Nouveau Printemps se rapproche.",
 		Domain:      "nouveauprintemps.org",
 	}
 	Files *embed.FS
