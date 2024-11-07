@@ -24,8 +24,8 @@ type SEOData struct {
 	Domain      string
 }
 
-type HomeTemplate struct {
-}
+type HomeTemplate struct{}
+type LegalTemplate struct{}
 
 var (
 	defaultSeoData = &SEOData{
@@ -43,9 +43,8 @@ func setupTemplates() *template.Template {
 
 func (t *HomeTemplate) Render(w http.ResponseWriter) {
 	data := TemplateData{
-		Title: "Accueil",
+		Title: "La confidentialité de vos données n'a jamais été aussi importante",
 		SEO: &SEOData{
-			Title:       "Accueil",
 			URL:         "/",
 			Description: "",
 		},
@@ -53,8 +52,19 @@ func (t *HomeTemplate) Render(w http.ResponseWriter) {
 	renderTemplate(w, "home", &data)
 }
 
+func (t *LegalTemplate) Render(w http.ResponseWriter) {
+	data := TemplateData{
+		Title: "Mentions légales",
+		SEO: &SEOData{
+			URL:         "/legal",
+			Description: "",
+		},
+	}
+	renderTemplate(w, "legal", &data)
+}
+
 func renderTemplate(w http.ResponseWriter, name string, data *TemplateData) {
-	mergeSeoData(data.SEO)
+	mergeData(data)
 	t := setupTemplates()
 	template.Must(t.ParseFS(Files, getFile(name)))
 	err := t.ExecuteTemplate(w, "base", data)
@@ -64,8 +74,11 @@ func renderTemplate(w http.ResponseWriter, name string, data *TemplateData) {
 	}
 }
 
-func mergeSeoData(s *SEOData) {
+func mergeData(d *TemplateData) {
+	d.Title += " - Nouveau Printemps"
+	s := d.SEO
 	s.Domain = defaultSeoData.Domain
+	s.Title += d.Title
 	if s.Image == "" {
 		s.Image = defaultSeoData.Image
 	}

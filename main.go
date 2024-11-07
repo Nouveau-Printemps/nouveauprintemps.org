@@ -21,6 +21,7 @@ func main() {
 	r := mux.NewRouter()
 
 	r.HandleFunc("/", src.HandleHome)
+	r.HandleFunc("/legal", src.HandleLegal)
 
 	// static files
 	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("./public"))))
@@ -41,6 +42,7 @@ func main() {
 	}()
 
 	slog.Info("Started")
+	slog.Info("Listening on " + srv.Addr)
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, os.Interrupt)
 	<-c
