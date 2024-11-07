@@ -22,4 +22,10 @@ a {
   &:hover {
     text-decoration: underline;
   }
+  &.calm {
+    color: var(--text);
+    &:hover {
+      font-style: italic;
+    }
+  }
 }
