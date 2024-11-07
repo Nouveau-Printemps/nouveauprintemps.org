@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Poppins";
-  src: url("/static/fonts/poppins/Poppins-Regular.ttf");
+  src: url("/static/fonts/poppins/Poppins-Regular.woff2"), url("/static/fonts/poppins/Poppins-Regular.ttf");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Faculty Glyphic";
-  src: url("/static/fonts/faculty_glyphic/FacultyGlyphic-Regular.ttf");
+  src: url("/static/fonts/faculty_glyphic/FacultyGlyphic-Regular.woff2"), url("/static/fonts/faculty_glyphic/FacultyGlyphic-Regular.ttf");
   font-weight: 400;
 }
