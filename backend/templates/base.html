@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" prefix="og: https://ogp.me/ns/article#">
+<html lang="{{ .Language }}" prefix="og: https://ogp.me/ns/article#">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,7 +7,7 @@
     {{ $styles := asset "styles.css" }}
     <link rel="stylesheet" href="{{ $styles.Src }}" integrity="{{ $styles.Checksum }}" />
     <link rel="shortcut icon" href="{{ static .Logo.Favicon }}" />
-    <link rel="alternate" href="/logs/rss" type="application/rss+xml" title="RSS" />
+    <link rel="alternate" href="/rss" type="application/rss+xml" title="RSS" />
     <meta property="description" content="{{ .PageDescription }}" />
     <!-- Open Graph -->
     <meta property="og:title" content="{{ .Title }}" />
@@ -39,7 +39,7 @@
       <p id="quote">«&thinsp;{{ .Quote }}&thinsp;»</p>
       <p>
         <a href="/legal">Mentions légales</a>,
-        <a href="https://github.com/nouveau-printemps/nouveauprintemps.org" target="_blank" rel="noreferrer">code source</a>.
+        <a href="https://git.anhgelus.world/anhgelus/small-web" target="_blank" rel="noreferrer">code source</a>.
       </p>
     </footer>
     {{ $script := asset "index.js" }}

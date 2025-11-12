@@ -28,14 +28,7 @@ func parse(b []byte, info *EntryInfo, d *data) (template.HTML, bool) {
 	} else {
 		dd = string(b)
 	}
-	content := template.HTML(dd) //markdown.Parse(dd, &markdown.Option{ImageSource: getStatic})
-	/*var errMd *markdown.ParseError
-	errors.As(err, &errMd)
-	if errMd != nil {
-		slog.Error("parsing markdown")
-		fmt.Println(errMd.Pretty())
-		return "", false
-	}*/
+	content := template.HTML(dd) // markdown.Parse(dd, &markdown.Option{ImageSource: getStatic})
 	d.PageDescription = info.Description
 	d.title = info.Title
 	d.Image = info.Img.Src
