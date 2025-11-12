@@ -50,8 +50,8 @@ func (c *Config) DefaultValues() {
 			URL:  "/",
 		},
 		{
-			Name: "Logs",
-			URL:  "/log/",
+			Name: "Blog",
+			URL:  "/blog/",
 		},
 	}
 	c.Logo = Logo{
@@ -59,10 +59,10 @@ func (c *Config) DefaultValues() {
 		Favicon: "favicon.jpg",
 	}
 	c.Sections = []Section{{
-		Name:        "logs",
+		Name:        "blog",
 		Description: "Aut maxime voluptatibus ut dicta voluptates et ut alias. Sunt et incidunt similique et doloremque nostrum fugit autem. Ut omnis quo nisi. Accusantium voluptas fugit autem maiores numquam doloribus.",
-		Folder:      "data/logs",
-		URI:         "logs",
+		Folder:      "data/blog",
+		URI:         "blog",
 	}}
 	c.RootFolder = "data"
 	c.PublicFolder = "public"

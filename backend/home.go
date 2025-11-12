@@ -74,7 +74,7 @@ func handleGenericRoot(w http.ResponseWriter, r *http.Request, name string) {
 		*d = *c
 	} else {
 		cfg := r.Context().Value(configKey).(*Config)
-		path := filepath.Join(cfg.RootFolder, name+".md")
+		path := filepath.Join(cfg.RootFolder, name+".html")
 		b, err := os.ReadFile(path)
 		if err != nil {
 			if os.IsNotExist(err) {

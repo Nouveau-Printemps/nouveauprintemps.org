@@ -108,10 +108,10 @@ func (s *Section) readDir(path string, dir []os.DirEntry) error {
 				return err
 			}
 		} else {
-			if !strings.HasSuffix(d.Name(), ".md") {
-				return fmt.Errorf("file %s is not a markdown file", d.Name())
+			if !strings.HasSuffix(d.Name(), ".html") {
+				return fmt.Errorf("file %s is not an html file", d.Name())
 			}
-			slug := strings.TrimSuffix(p, ".md")
+			slug := strings.TrimSuffix(p, ".html")
 			sec, ok := sections[s.Name]
 			if !ok {
 				sec = make(map[string]*sectionData, 2)
@@ -127,7 +127,7 @@ func (s *Section) readDir(path string, dir []os.DirEntry) error {
 			wg.Add(1)
 			go func(p string, d os.DirEntry) {
 				defer wg.Done()
-				ok = s.parse(dd, &mu, slug, strings.TrimSuffix(d.Name(), ".md"))
+				ok = s.parse(dd, &mu, slug, strings.TrimSuffix(d.Name(), ".html"))
 				if ok {
 					slog.Debug("data parsed", "path", p)
 				} else {
@@ -199,7 +199,7 @@ func (s *Section) handleOne(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	}
-	d.section = s.Name[:len(s.Name)-1]
+	d.section = s.Name
 	d.handleGeneric(w, r, "data", d)
 }
 
@@ -207,7 +207,7 @@ func (s *Section) parse(d *sectionData, mu *sync.Mutex, path, slug string) bool 
 	d.Article = true
 	d.DataTitle = slug
 	d.Slug = slug
-	b, err := os.ReadFile(path + ".md")
+	b, err := os.ReadFile(path + ".html")
 	if err != nil {
 		if os.IsNotExist(err) {
 			return false
