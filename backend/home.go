@@ -17,6 +17,7 @@ var (
 
 type homeData struct {
 	*data
+	Content  template.HTML
 	Sections []*Section
 }
 

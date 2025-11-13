@@ -31,7 +31,13 @@
   <body hx-push-url="true">
     <header>
       <img src="{{ static .Logo.Header }}" alt="Logo" />
-      <nav>{{ range .Links }}{{ .Render }}{{end}}</nav>
+      <nav>
+        <ul>
+          {{ range .Links }}
+          <li>{{ .Render }}</li>
+          {{end}}
+        </ul>
+      </nav>
     </header>
     {{ template "body" . }}
     <footer>

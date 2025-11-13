@@ -1,9 +1,11 @@
 package backend
 
 import (
+	"fmt"
 	"html/template"
 	"log/slog"
 	"os"
+	"regexp"
 
 	"github.com/pelletier/go-toml/v2"
 )
@@ -13,9 +15,14 @@ type Link struct {
 	URL  string `toml:"url"`
 }
 
+var externalLink = regexp.MustCompile("https?://")
+
 func (l *Link) Render() template.HTML {
 	//return markdown.RenderLink(l.Name, l.URL)
-	return ""
+	if externalLink.MatchString(l.URL) {
+		return template.HTML(fmt.Sprintf(`<a target="_blank" href="%s">%s</a>`, l.URL, l.Name))
+	}
+	return template.HTML(fmt.Sprintf(`<a href="%s">%s</a>`, l.URL, l.Name))
 }
 
 type Logo struct {
@@ -35,6 +42,7 @@ type Config struct {
 
 	RootFolder   string `toml:"root_folder"`
 	PublicFolder string `toml:"public_folder"`
+	HomeContent  string `toml:"home_content"`
 
 	Links []Link `toml:"links"`
 	Logo  Logo   `toml:"logo"`
@@ -66,6 +74,7 @@ func (c *Config) DefaultValues() {
 	}}
 	c.RootFolder = "data"
 	c.PublicFolder = "public"
+	c.HomeContent = "home.html"
 	c.Quotes = []string{"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do."}
 }
 
