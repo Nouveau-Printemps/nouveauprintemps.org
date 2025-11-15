@@ -15,13 +15,16 @@ type EntryInfo struct {
 	PubLocalDate toml.LocalDate `toml:"publication_date"`
 }
 
-func parse(b []byte, info *EntryInfo, d *data) (template.HTML, bool) {
+func parse(b []byte, info *EntryInfo, d *data) template.HTML {
 	var dd string
 	splits := strings.SplitN(string(b), "---", 2)
-	if len(splits) == 2 && info != nil {
-		err := toml.Unmarshal([]byte(splits[0]), info)
-		if err != nil {
-			slog.Warn("parsing entry info", "error", err)
+	if len(splits) == 2 {
+		if info != nil {
+			err := toml.Unmarshal([]byte(splits[0]), info)
+			if err != nil {
+				slog.Warn("parsing entry info", "error", err)
+			}
+			dd = splits[1]
 		} else {
 			dd = splits[1]
 		}
@@ -29,8 +32,10 @@ func parse(b []byte, info *EntryInfo, d *data) (template.HTML, bool) {
 		dd = string(b)
 	}
 	content := template.HTML(dd) // markdown.Parse(dd, &markdown.Option{ImageSource: getStatic})
-	d.PageDescription = info.Description
-	d.title = info.Title
-	d.Image = info.Img.Src
-	return content, true
+	if info != nil {
+		d.PageDescription = info.Description
+		d.title = info.Title
+		d.Image = info.Img.Src
+	}
+	return content
 }

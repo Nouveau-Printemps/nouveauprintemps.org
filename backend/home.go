@@ -25,26 +25,45 @@ func (h *homeData) SetData(d *data) {
 	h.data = d
 }
 
+func (h *homeData) handle(w http.ResponseWriter, r *http.Request) {
+	h.handleGeneric(w, r, "home", h)
+}
+
 func HandleHome(r *chi.Mux) {
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
 		cfg := r.Context().Value(configKey).(*Config)
+		b, err := os.ReadFile(filepath.Join(cfg.RootFolder, cfg.HomeContent))
+		if err != nil {
+			if os.IsNotExist(err) {
+				notFound()(w, r)
+				return
+			}
+			panic(err)
+		}
 		d := handleGenericSectionDisplay(w, r, cfg.Sections, 3)
 		if d == nil {
 			return
 		}
-		d.handleGeneric(w, r, "home", d)
+		d.Content = parse(b, nil, d.data)
+		d.handle(w, r)
 	})
 }
 
 func Handle404(r *chi.Mux) {
-	r.NotFound(notFound)
+	r.NotFound(notFound())
 }
 
-func notFound(w http.ResponseWriter, r *http.Request) {
-	d := new(data)
-	d.title = "404"
+type dataNotFound struct{ data }
+
+func (d *dataNotFound) handle(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusNotFound)
-	d.handleGeneric(w, r, "404", d)
+	d.handleGeneric(w, r, "404", &d.data)
+}
+
+func notFound() http.HandlerFunc {
+	d := new(dataNotFound)
+	d.title = "404"
+	return d.handle
 }
 
 type rootData struct {
@@ -75,20 +94,15 @@ func handleGenericRoot(w http.ResponseWriter, r *http.Request, name string) {
 		*d = *c
 	} else {
 		cfg := r.Context().Value(configKey).(*Config)
-		path := filepath.Join(cfg.RootFolder, name+".html")
-		b, err := os.ReadFile(path)
+		b, err := os.ReadFile(filepath.Join(cfg.RootFolder, name+".html"))
 		if err != nil {
 			if os.IsNotExist(err) {
-				notFound(w, r)
+				notFound()(w, r)
 				return
 			}
 			panic(err)
 		}
-		d.Content, ok = parse(b, new(EntryInfo), d.data)
-		if !ok {
-			w.WriteHeader(http.StatusInternalServerError)
-			return
-		}
+		d.Content = parse(b, nil, d.data)
 		rootContent[name] = d
 	}
 	d.handleGeneric(w, r, "simple", d)

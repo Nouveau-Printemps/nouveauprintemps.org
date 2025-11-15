@@ -196,7 +196,7 @@ func (s *Section) handleOne(w http.ResponseWriter, r *http.Request) {
 		d = new(sectionData)
 		d.data = new(data)
 		if ok = s.parse(d, new(sync.Mutex), path, slug); !ok {
-			notFound(w, r)
+			notFound()(w, r)
 			return
 		}
 	}
@@ -215,11 +215,7 @@ func (s *Section) parse(d *sectionData, mu *sync.Mutex, path, slug string) bool 
 		}
 		panic(err)
 	}
-	var ok bool
-	d.Content, ok = parse(b, &d.EntryInfo, d.data)
-	if !ok {
-		return false
-	}
+	d.Content = parse(b, &d.EntryInfo, d.data)
 	d.DataTitle = d.EntryInfo.Title
 	mu.Lock()
 	sec, ok := sections[s.Name]
@@ -276,7 +272,7 @@ func (s *Section) handlePagination(w http.ResponseWriter, r *http.Request, maxLo
 	p.Current = page
 	p.Max = max(1, (len(s.Data)-1)/maxLogsPerPage+1)
 	if p.Max < page {
-		notFound(w, r)
+		notFound()(w, r)
 		return nil
 	}
 	p.Start = (page - 1) * maxLogsPerPage

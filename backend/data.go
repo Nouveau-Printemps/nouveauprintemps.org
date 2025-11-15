@@ -23,6 +23,7 @@ var (
 
 type dataUsable interface {
 	SetData(*data)
+	handle(http.ResponseWriter, *http.Request)
 }
 
 type data struct {
@@ -43,6 +44,8 @@ type data struct {
 func (d *data) SetData(data *data) {
 	*d = *data
 }
+
+func (d *data) handle(w http.ResponseWriter, r *http.Request) {}
 
 func (d *data) merge(cfg *Config, r *http.Request) {
 	if d.Domain == "" {
@@ -81,69 +84,81 @@ func (d *data) merge(cfg *Config, r *http.Request) {
 	}
 }
 
+func (d *data) handleGenericLater(name string, custom dataUsable) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		cfg := r.Context().Value(configKey).(*Config)
+		d.merge(cfg, r)
+		t, err := template.New("").Funcs(template.FuncMap{
+			"static": getStatic,
+			"fullStatic": func(path string) string {
+				if regexIsHttp.MatchString(path) {
+					return path
+				}
+				return fmt.Sprintf("https://%s/static/%s", cfg.Domain, path)
+			},
+			"asset": func(path string) *assetData {
+				return getAsset(r.Context(), path)
+			},
+			"next":   func(i int) int { return i + 1 },
+			"before": func(i int) int { return i - 1 },
+			"first":  templateFirst,
+		}).ParseFS(templates, "templates/components.html", fmt.Sprintf("templates/%s.html", name), "templates/base.html")
+		if err != nil {
+			panic(err)
+		}
+		exec := "base.html"
+		if r.Context().Value(isUpdateKey).(bool) {
+			exec = "body"
+			w.Header().Set("Updated-Title", url.QueryEscape(d.Title()))
+			w.Header().Set("Updated-Quote", url.QueryEscape(d.Quote))
+		}
+		if custom == nil {
+			err = t.ExecuteTemplate(w, exec, d)
+		} else {
+			custom.SetData(d)
+			err = t.ExecuteTemplate(w, exec, custom)
+		}
+		if err != nil {
+			panic(err)
+		}
+	}
+}
+
 func (d *data) handleGeneric(w http.ResponseWriter, r *http.Request, name string, custom dataUsable) {
-	cfg := r.Context().Value(configKey).(*Config)
-	d.merge(cfg, r)
-	t, err := template.New("").Funcs(template.FuncMap{
-		"static": getStatic,
-		"fullStatic": func(path string) string {
-			if regexIsHttp.MatchString(path) {
-				return path
-			}
-			return fmt.Sprintf("https://%s/static/%s", cfg.Domain, path)
-		},
-		"asset": func(path string) *assetData {
-			return getAsset(r.Context(), path)
-		},
-		"next":   func(i int) int { return i + 1 },
-		"before": func(i int) int { return i - 1 },
-		"first":  templateFirst,
-	}).ParseFS(templates, "templates/components.html", fmt.Sprintf("templates/%s.html", name), "templates/base.html")
-	if err != nil {
-		panic(err)
-	}
-	exec := "base.html"
-	if r.Context().Value(isUpdateKey).(bool) {
-		exec = "body"
-		w.Header().Set("Updated-Title", url.QueryEscape(d.Title()))
-		w.Header().Set("Updated-Quote", url.QueryEscape(d.Quote))
-	}
-	if custom == nil {
-		err = t.ExecuteTemplate(w, exec, d)
-	} else {
-		custom.SetData(d)
-		err = t.ExecuteTemplate(w, exec, custom)
-	}
-	if err != nil {
-		panic(err)
+	d.handleGenericLater(name, custom)(w, r)
+}
+
+func (d *data) handleRSSLater(custom dataUsable) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		cfg := r.Context().Value(configKey).(*Config)
+		d.merge(cfg, r)
+		t, err := txt.New("").Funcs(txt.FuncMap{
+			"first": templateFirst,
+			"uri": func(s string) string {
+				if s == "" {
+					return ""
+				}
+				return s + "/"
+			},
+		}).ParseFS(templates, "templates/rss.xml")
+		if err != nil {
+			panic(err)
+		}
+		r.Header.Set("Content-Type", "application/rss+xml")
+		if custom == nil {
+			err = t.ExecuteTemplate(w, "rss.xml", d)
+		} else {
+			custom.SetData(d)
+			err = t.ExecuteTemplate(w, "rss.xml", custom)
+		}
+		if err != nil {
+			panic(err)
+		}
 	}
 }
 
 func (d *data) handleRSS(w http.ResponseWriter, r *http.Request, custom dataUsable) {
-	cfg := r.Context().Value(configKey).(*Config)
-	d.merge(cfg, r)
-	t, err := txt.New("").Funcs(txt.FuncMap{
-		"first": templateFirst,
-		"uri": func(s string) string {
-			if s == "" {
-				return ""
-			}
-			return s + "/"
-		},
-	}).ParseFS(templates, "templates/rss.xml")
-	if err != nil {
-		panic(err)
-	}
-	r.Header.Set("Content-Type", "application/rss+xml")
-	if custom == nil {
-		err = t.ExecuteTemplate(w, "rss.xml", d)
-	} else {
-		custom.SetData(d)
-		err = t.ExecuteTemplate(w, "rss.xml", custom)
-	}
-	if err != nil {
-		panic(err)
-	}
+	d.handleRSSLater(custom)(w, r)
 }
 
 func (d *data) Title() string {
