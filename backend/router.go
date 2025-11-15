@@ -17,7 +17,7 @@ import (
 )
 
 const (
-	Version     = "0.4.0"
+	Version     = "1.0.0"
 	configKey   = "config"
 	isUpdateKey = "is_update"
 	assetsFSKey = "assets_fs"
@@ -39,7 +39,7 @@ func SetupLogger(debug bool) {
 		ReplaceAttr: logFormat.ReplaceAttr,
 		Level:       logLevel,
 	})).With(
-		slog.String("app", "anhgelus/small-web"),
+		slog.String("app", "nouveau-printemps/nouveauprintemps.org"),
 		slog.String("version", Version),
 	)
 
@@ -127,7 +127,7 @@ func (h *httpEmbedFS) ReadDir(name string) ([]fs.DirEntry, error) {
 	return h.FS.ReadDir(h.prefix + "/" + name)
 }
 
-// UsableEmbedFS converts embed.FS into usable fs.FS by Golatt
+// UsableEmbedFS converts embed.FS into usable fs.FS
 //
 // folder may not finish or start with a slash (/)
 func UsableEmbedFS(folder string, em embed.FS) fs.FS {

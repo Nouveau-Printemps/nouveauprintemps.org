@@ -9,4 +9,3 @@ Official website of Nouveau Printemps.
 - `pelletier/go-toml`
 - HTMX
 - SCSS
-
