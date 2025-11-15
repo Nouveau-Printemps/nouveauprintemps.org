@@ -4,7 +4,7 @@ htmx.config.historyRestoreAsHxRequest = false;
 htmx.config.includeIndicatorStyles = false;
 
 function setupAnchors() {
-  document.querySelectorAll("a").forEach((e) => {
+  document.querySelectorAll("nav a").forEach((e) => {
     // stuff related to external links are already handled in the backend
     if (!e.href.startsWith(window.location.origin) && /https?:\/\//.test(e.href)) return;
     // stuff related to RSS must not be processed by HTMX.
