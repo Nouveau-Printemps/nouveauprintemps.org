@@ -1,0 +1,49 @@
+@use "../../node_modules/reset-css/reset.css";
+@use "general";
+@use "special";
+@use "home";
+
+:root {
+  --color-dark: hsl(201, 35%, 12%);
+  --color-light: hsl(97, 10%, 85%);
+  --color-gray: hsl(50, 5%, 65%); /* quote and legend */
+  --color-rose: hsl(50, 50%, 70%); /* link accent */
+  --color-light-rose: hsl(50, 60%, 30%, 0.2); /* link accent hover and highlight */
+  --color-black: rgba(0, 0, 0, 0.4); /* pre, code */
+
+  @media (prefers-color-scheme: light) {
+    --color-dark: hsl(97, 15%, 90%);
+    --color-light: hsl(201, 35%, 12%);
+    --color-gray: hsl(50, 5%, 30%); /* quote and legend */
+    --color-rose: hsl(150, 65%, 20%); /* link accent */
+    --color-light-rose: hsl(150, 65%, 45%, 0.2); /* link accent hover and highlight */
+    --color-black: rgba(0, 0, 0, 0.2); /* pre, code */
+  }
+
+  --font-size-tiny: 0.85rem; /* quote, legend, code */
+  --line-height: 1.75em;
+  --line-height-smaller: 1.4em; /* titles, nav links */
+
+  --width-content: 750px; /* main, article */
+  --width-deco: 1000px; /* header, footer, large image */
+  --height-header: 4rem; /* header, footer, introduction */
+
+  --margin-base: 1.5rem;
+  --margin-header: calc(var(--height-header) / 2);
+
+  font-size: 18px;
+}
+
+/* for htmx */
+
+.htmx-indicator {
+  opacity: 0;
+}
+.htmx-request .htmx-indicator {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}
+.htmx-request.htmx-indicator {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}
