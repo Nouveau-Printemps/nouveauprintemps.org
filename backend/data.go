@@ -9,7 +9,6 @@ import (
 	"io"
 	"io/fs"
 	"log/slog"
-	"math/rand"
 	"net/http"
 	"net/url"
 	"regexp"
@@ -36,7 +35,6 @@ type data struct {
 	Name            string
 	Links           []Link
 	Logo            *Logo
-	Quote           string
 	Language        string
 	section         string
 }
@@ -62,13 +60,6 @@ func (d *data) merge(cfg *Config, r *http.Request) {
 	}
 	if d.Logo == nil {
 		d.Logo = &cfg.Logo
-	}
-	if d.Quote == "" {
-		if cfg.Quotes == nil {
-			d.Quote = "Une citation"
-		} else {
-			d.Quote = cfg.Quotes[rand.Intn(len(cfg.Quotes))]
-		}
 	}
 	if d.Image == "" {
 		d.Image = cfg.DefaultImage
@@ -110,7 +101,6 @@ func (d *data) handleGenericLater(name string, custom dataUsable) http.HandlerFu
 		if r.Context().Value(isUpdateKey).(bool) {
 			exec = "body"
 			w.Header().Set("Updated-Title", url.QueryEscape(d.Title()))
-			w.Header().Set("Updated-Quote", url.QueryEscape(d.Quote))
 		}
 		if custom == nil {
 			err = t.ExecuteTemplate(w, exec, d)

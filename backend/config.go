@@ -31,12 +31,11 @@ type Logo struct {
 }
 
 type Config struct {
-	Domain       string   `toml:"domain"`
-	Name         string   `toml:"name"`
-	Description  string   `toml:"description"`
-	DefaultImage string   `toml:"default_image"`
-	Quotes       []string `toml:"quotes"`
-	Language     string   `toml:"language"`
+	Domain       string `toml:"domain"`
+	Name         string `toml:"name"`
+	Description  string `toml:"description"`
+	DefaultImage string `toml:"default_image"`
+	Language     string `toml:"language"`
 
 	Sections []Section `toml:"section"`
 
@@ -75,7 +74,6 @@ func (c *Config) DefaultValues() {
 	c.RootFolder = "data"
 	c.PublicFolder = "public"
 	c.HomeContent = "home.html"
-	c.Quotes = []string{"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do."}
 }
 
 func LoadConfig(path string) (*Config, bool) {
