@@ -12,12 +12,12 @@
   --color-black: rgba(0, 0, 0, 0.4); /* pre, code */
 
   @media (prefers-color-scheme: light) {
-    --color-dark: hsl(97, 15%, 90%);
+    --color-dark: hsl(97, 30%, 90%);
     --color-light: hsl(201, 35%, 12%);
-    --color-gray: hsl(50, 5%, 30%); /* quote and legend */
+    --color-gray: hsl(50, 5%, 20%); /* quote and legend */
     --color-rose: hsl(150, 65%, 20%); /* link accent */
     --color-light-rose: hsl(150, 65%, 45%, 0.2); /* link accent hover and highlight */
-    --color-black: rgba(0, 0, 0, 0.2); /* pre, code */
+    --color-black: rgba(0, 0, 0, 0.3); /* pre, code */
   }
 
   --font-size-tiny: 0.85rem; /* quote, legend, code */
