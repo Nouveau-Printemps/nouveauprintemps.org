@@ -152,12 +152,21 @@ func (d *data) handleRSS(w http.ResponseWriter, r *http.Request, custom dataUsab
 }
 
 func (d *data) Title() string {
-	title := d.Name
 	if d.Article {
-		title = fmt.Sprintf("%s - %s entry", title, d.section)
+		return fmt.Sprintf("%s - %s entry - %s", d.Name, d.section, d.title)
 	}
+	title := d.Name
 	if len(d.title) != 0 {
 		title += " - " + d.title
+	} else if strings.Count(d.URL, "/") == 1 && d.URL != "/" {
+		title += " - "
+		for i, s := range strings.Split(d.URL, "-") {
+			if i == 0 {
+				title += strings.ToUpper(s[1:2]) + s[2:]
+			} else {
+				title += " " + s
+			}
+		}
 	}
 	return title
 }
