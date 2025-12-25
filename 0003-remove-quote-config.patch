@@ -1,0 +1,70 @@
+diff --git a/backend/config.go b/backend/config.go
+index c97fa21..64626f1 100644
+--- a/backend/config.go
++++ b/backend/config.go
+@@ -29,15 +29,14 @@ type Replacer struct {
+ }
+ 
+ type Config struct {
+-	Domain        string   `toml:"domain"`
+-	Name          string   `toml:"name"`
+-	Description   string   `toml:"description"`
+-	DefaultImage  string   `toml:"default_image"`
+-	Quotes        []string `toml:"quotes"`
+-	Language      string   `toml:"language"`
+-	Database      string   `toml:"database"`
+-	AdminPassword string   `toml:"admin_password"`
+-	HomeContent   string   `toml:"home_content"`
++	Domain        string `toml:"domain"`
++	Name          string `toml:"name"`
++	Description   string `toml:"description"`
++	DefaultImage  string `toml:"default_image"`
++	Language      string `toml:"language"`
++	Database      string `toml:"database"`
++	AdminPassword string `toml:"admin_password"`
++	HomeContent   string `toml:"home_content"`
+ 
+ 	Sections []Section `toml:"section"`
+ 
+@@ -79,7 +78,6 @@ func (c *Config) DefaultValues() {
+ 	c.Database = "database.sqlite"
+ 	c.AdminPassword = "Ch@ngeM€Please!"
+ 	c.HomeContent = "home"
+-	c.Quotes = []string{"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do."}
+ 	c.Replacers = []Replacer{{"~", "&thinsp;"}}
+ }
+ 
+diff --git a/backend/data.go b/backend/data.go
+index 2f2e06d..f3d3497 100644
+--- a/backend/data.go
++++ b/backend/data.go
+@@ -9,7 +9,6 @@ import (
+ 	"io"
+ 	"io/fs"
+ 	"log/slog"
+-	"math/rand"
+ 	"net/http"
+ 	"regexp"
+ 	"strings"
+@@ -34,7 +33,6 @@ type data struct {
+ 	Name            string
+ 	Links           []Link
+ 	Logo            *Logo
+-	Quote           string
+ 	Language        string
+ 	section         string
+ }
+@@ -59,13 +57,6 @@ func (d *data) merge(cfg *Config, r *http.Request) {
+ 	if d.Logo == nil {
+ 		d.Logo = &cfg.Logo
+ 	}
+-	if d.Quote == "" {
+-		if cfg.Quotes == nil {
+-			d.Quote = "Une citation"
+-		} else {
+-			d.Quote = cfg.Quotes[rand.Intn(len(cfg.Quotes))]
+-		}
+-	}
+ 	if d.Image == "" {
+ 		d.Image = cfg.DefaultImage
+ 	}
