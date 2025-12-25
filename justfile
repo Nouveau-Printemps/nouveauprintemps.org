@@ -14,3 +14,6 @@ build:
 clean:
     rm -fr build || echo "no build"
     rm -fr dev || echo "no dev"
+
+update-dev:
+    cd dev && (git add * || echo "ok") && git commit --no-gpg-sign --amend -am "PREVIOUS"
