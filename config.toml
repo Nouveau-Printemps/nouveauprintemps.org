@@ -1,0 +1,44 @@
+domain = 'nouveauprintemps.org'
+name = 'Nouveau Printemps'
+description = "Vous venez d'arriver sur un internet plus simple, centré sur l'humain. Ici, tout semble différent, vous ne reconnaissez rien de l'internet d'avant. Dans ce coin perdu, un petit groupe cherche à se protéger de la déshumanisation et de la censure."
+default_image = ''
+language = 'fr'
+root_folder = 'data'
+public_folder = 'public'
+database = "database.sqlite"
+admin_password = "admin"
+home_content = "home"
+
+[logo]
+header = 'logo.svg'
+favicon = 'logo.svg'
+
+[[section]]
+name = 'Blog'
+folder = 'data/blog'
+description = "Actualités, réflexions et informations généralistes du Nouveau Printemps." 
+uri = 'blog'
+
+[[links]]
+name = 'Accueil'
+url = '/'
+
+[[links]]
+name = 'Services'
+url = '/services'
+
+[[links]]
+name = 'Nous rejoindre'
+url = '/rejoindre'
+
+[[links]]
+name = 'Blog'
+url = '/blog/'
+
+[[links]]
+name = 'Contact'
+url = '/contact'
+
+[[replacers]]
+symbol = "~"
+replace = "&thinsp;"
