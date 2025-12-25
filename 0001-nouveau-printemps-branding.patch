@@ -1,0 +1,396 @@
+diff --git a/backend/admin.go b/backend/admin.go
+index 087a3ea..3614e9e 100644
+--- a/backend/admin.go
++++ b/backend/admin.go
+@@ -5,7 +5,7 @@ import (
+ 	"net/http"
+ 	"strconv"
+ 
+-	"git.anhgelus.world/anhgelus/small-web/backend/storage"
++	"github.com/Nouveau-Printemps/nouveauprintemps.org/backend/storage"
+ 	"github.com/go-chi/chi/v5"
+ )
+ 
+diff --git a/backend/config.go b/backend/config.go
+index 33d5852..6052e4b 100644
+--- a/backend/config.go
++++ b/backend/config.go
+@@ -5,7 +5,7 @@ import (
+ 	"log/slog"
+ 	"os"
+ 
+-	"git.anhgelus.world/anhgelus/small-web/markdown"
++	"github.com/Nouveau-Printemps/nouveauprintemps.org/markdown"
+ 	"github.com/pelletier/go-toml/v2"
+ )
+ 
+diff --git a/backend/parser.go b/backend/parser.go
+index 9165c71..d177837 100644
+--- a/backend/parser.go
++++ b/backend/parser.go
+@@ -7,8 +7,8 @@ import (
+ 	"log/slog"
+ 	"strings"
+ 
+-	"git.anhgelus.world/anhgelus/small-web/dom"
+-	"git.anhgelus.world/anhgelus/small-web/markdown"
++	"github.com/Nouveau-Printemps/nouveauprintemps.org/dom"
++	"github.com/Nouveau-Printemps/nouveauprintemps.org/markdown"
+ 	"github.com/pelletier/go-toml/v2"
+ )
+ 
+diff --git a/backend/router.go b/backend/router.go
+index 1a2f024..c0277c6 100644
+--- a/backend/router.go
++++ b/backend/router.go
+@@ -14,7 +14,7 @@ import (
+ 	"strings"
+ 	"time"
+ 
+-	"git.anhgelus.world/anhgelus/small-web/backend/storage"
++	"github.com/Nouveau-Printemps/nouveauprintemps.org/backend/storage"
+ 	"github.com/go-chi/chi/v5"
+ 	"github.com/go-chi/chi/v5/middleware"
+ 	"github.com/go-chi/httplog/v3"
+@@ -43,7 +43,7 @@ func SetupLogger(debug bool) {
+ 		ReplaceAttr: logFormat.ReplaceAttr,
+ 		Level:       logLevel,
+ 	})).With(
+-		slog.String("app", "anhgelus/small-web"),
++		slog.String("app", "Nouveau-Printemps/nouveauprintemps.org"),
+ 		slog.String("version", Version),
+ 	)
+ 
+diff --git a/backend/templates/404.html b/backend/templates/404.html
+index e0bca68..f63d959 100644
+--- a/backend/templates/404.html
++++ b/backend/templates/404.html
+@@ -4,7 +4,7 @@
+   <p>Tu as des liens en haut pour retrouver ton chemin :3</p>
+   <p>
+     Si tu penses que c'est un bug, hésite pas à ouvrir une issue sur
+-    <a href="https://github.com/anhgelus/small-web/issues">GitHub</a> :D
++    <a href="https://github.com/nouveau-printemps/nouveauprintemps.org/issues">GitHub</a> :D
+   </p>
+   <p>(enfin, sauf si tu as un compte sur ma forge, mais ça m'étonnerait...)</p>
+ </main>
+diff --git a/backend/templates/base.html b/backend/templates/base.html
+index 20abcd0..ef8e3b9 100644
+--- a/backend/templates/base.html
++++ b/backend/templates/base.html
+@@ -13,7 +13,9 @@
+     <meta property="og:title" content="{{ .Title }}" />
+     <meta property="og:type" content="website" />
+     <meta property="og:url" content="https://{{ .Domain }}{{ .URL }}" />
++    {{ if ne .Image "" }}
+     <meta property="og:image" content="{{ fullStatic .Image }}" />
++    {{ end }}
+     <meta property="og:description" content="{{ .PageDescription }}" />
+     <meta property="og:local" content="fr_FR" />
+     <meta property="og:site_name" content="{{ .Name }}" />
+@@ -21,26 +23,37 @@
+     <meta property="article:published_time" content="{{ .PubDate }}" />
+     {{ end }}
+     <!-- Twitter  -->
++    {{ if ne .Image "" }}
+     <meta name="twitter:card" content="summary_large_image" />
++    <meta name="twitter:image" content="{{ fullStatic .Image }}" />
++    {{ else }}
++    <meta name="twitter:card" content="summary" />
++    {{ end }}
+     <meta property="twitter:domain" content="{{ .Domain }}" />
+     <meta property="twitter:url" content="https://{{ .Domain }}{{ .URL }}" />
+     <meta name="twitter:title" content="{{ .Title }}" />
+     <meta name="twitter:description" content="{{ .PageDescription }}" />
+-    <meta name="twitter:image" content="{{ fullStatic .Image }}" />
+   </head>
+   <body>
+     <header>
+       <img src="{{ static .Logo.Header }}" alt="Logo" />
+-      {{ $url := .URL }}
+-      <nav>{{ range .Links }}{{ .Render $url }}{{end}}</nav>
++      <nav>
++        <ul>
++          {{ $url := .URL }}
++          {{ range .Links }}
++          <li>{{ .Render $url }}</li>
++          {{end}}
++        </ul>
++      </nav>
+     </header>
+     {{ template "body" . }}
+     <footer>
+-      <p>&copy; 2025 - Anhgelus Morthuuzh</p>
+-      <p id="quote">«&thinsp;{{ .Quote }}&thinsp;»</p>
++      <p>&copy; 2025 - Nouveau Printemps</p>
+       <p>
+-        <a href="/legal">Mentions légales</a>,
+-        <a href="https://git.anhgelus.world/anhgelus/small-web" target="_blank" rel="noreferrer">code source</a>.
++        <a href="/charte">Charte du Nouveau Printemps</a>, <a href="/legal">mentions légales</a>,
++        <a href="https://github.com/Nouveau-Printemps/nouveauprintemps.org" target="_blank" rel="noreferrer"
++          >code source</a
++        >.
+       </p>
+     </footer>
+   </body>
+diff --git a/frontend/scss/home.scss b/frontend/scss/home.scss
+index ff25ef5..9f72a5c 100644
+--- a/frontend/scss/home.scss
++++ b/frontend/scss/home.scss
+@@ -1,5 +1,5 @@
+ .introduction {
+-  margin: var(--margin-header) 0;
++  margin: calc(2 * var(--margin-header)) 0;
+ }
+ 
+ .sections {
+diff --git a/frontend/scss/main.scss b/frontend/scss/main.scss
+index ced6763..65c4ef9 100644
+--- a/frontend/scss/main.scss
++++ b/frontend/scss/main.scss
+@@ -4,19 +4,19 @@
+ @use "home";
+ 
+ :root {
+-  --color-dark: hsl(202, 25%, 9%);
+-  --color-light: #dce4e4;
+-  --color-gray: #bcb3bb; /* quote and legend */
+-  --color-rose: #f2b5d4; /* link accent */
+-  --color-light-rose: hsl(330, 55%, 70%, 0.2); /* link accent hover and highlight */
++  --color-dark: hsl(201, 35%, 12%);
++  --color-light: hsl(97, 10%, 85%);
++  --color-gray: hsl(50, 5%, 65%); /* quote and legend */
++  --color-rose: hsl(50, 50%, 70%); /* link accent */
++  --color-light-rose: hsl(50, 60%, 30%, 0.2); /* link accent hover and highlight */
+   --color-black: rgba(0, 0, 0, 0.4); /* pre, code */
+ 
+   @media (prefers-color-scheme: light) {
+-    --color-dark: #dbf6f6;
+-    --color-light: hsl(202, 25%, 9%);
+-    --color-gray: #433b42; /* quote and legend */
+-    --color-rose: #a01a5e; /* link accent */
+-    --color-light-rose: hsla(330, 86%, 67%, 0.2); /* link accent hover and highlight */
++    --color-dark: hsl(97, 30%, 90%);
++    --color-light: hsl(201, 35%, 12%);
++    --color-gray: hsl(50, 5%, 15%); /* quote and legend */
++    --color-rose: hsl(150, 65%, 20%); /* link accent */
++    --color-light-rose: hsl(150, 65%, 45%, 0.2); /* link accent hover and highlight */
+     --color-black: rgba(0, 0, 0, 0.2); /* pre, code */
+   }
+ 
+@@ -26,7 +26,7 @@
+ 
+   --width-content: 750px; /* main, article */
+   --width-deco: 1000px; /* header, footer, large image */
+-  --height-header: 8rem; /* header, footer, introduction */
++  --height-header: 4rem; /* header, footer, introduction */
+ 
+   --margin-base: 1.5rem;
+   --margin-header: calc(var(--height-header) / 2);
+diff --git a/frontend/scss/special.scss b/frontend/scss/special.scss
+index d0e9ee9..9663987 100644
+--- a/frontend/scss/special.scss
++++ b/frontend/scss/special.scss
+@@ -1,9 +1,11 @@
++@use "general";
++
+ header {
+   max-width: var(--width-deco);
+   height: var(--height-header);
+ 
+   margin: 0 auto var(--margin-header) auto;
+-  padding-bottom: 2rem;
++  padding-bottom: calc(var(--height-header) / 4);
+ 
+   display: flex;
+   flex-direction: row;
+@@ -12,31 +14,47 @@ header {
+ 
+   border-bottom: var(--color-light) 2px solid;
+ 
++  & a {
++    max-height: var(--height-header);
++    &:hover {
++      background: none;
++    }
++  }
++
+   & img {
+     height: var(--height-header);
+   }
+ 
+   & nav {
+-    display: flex;
+-    flex-direction: column;
+-    flex-wrap: wrap;
+-    gap: 0.5rem;
+-
+-    max-height: 100%;
++    & > ul {
++      display: flex;
++      flex-direction: row;
++      flex-wrap: wrap;
++      gap: 0.5rem 1rem;
++
++      max-height: 100%;
++
++      list-style-type: none;
++      margin-top: 0;
++      margin-bottom: 0;
++      margin-left: 0;
++
++      & > li {
++        margin-bottom: 0;
++      }
++    }
+ 
+     & a {
+       display: block;
+ 
+-      min-width: 7rem;
++      padding: 0 0.5rem;
+ 
+       font-family: monospace;
++      &:hover {
++        @extend .target;
++      }
+     }
+   }
+-  @media only screen and (max-width: 800px) {
+-    height: 12rem;
+-    padding-bottom: 0;
+-    align-items: start;
+-  }
+ 
+   @media only screen and (max-width: 600px) {
+     flex-direction: column;
+@@ -47,6 +65,10 @@ header {
+ 
+     padding-bottom: 2rem;
+ 
++    & nav > ul {
++      flex-direction: column;
++    }
++
+     & img {
+       height: 100%;
+       width: max(33%, 128px);
+diff --git a/go.mod b/go.mod
+index 9c84422..1e757fa 100644
+--- a/go.mod
++++ b/go.mod
+@@ -1,4 +1,4 @@
+-module git.anhgelus.world/anhgelus/small-web
++module github.com/Nouveau-Printemps/nouveauprintemps.org
+ 
+ go 1.25.1
+ 
+diff --git a/main.go b/main.go
+index b1a192e..f96932b 100644
+--- a/main.go
++++ b/main.go
+@@ -14,8 +14,8 @@ import (
+ 	"syscall"
+ 	"time"
+ 
+-	"git.anhgelus.world/anhgelus/small-web/backend"
+-	"git.anhgelus.world/anhgelus/small-web/backend/storage"
++	"github.com/Nouveau-Printemps/nouveauprintemps.org/backend"
++	"github.com/Nouveau-Printemps/nouveauprintemps.org/backend/storage"
+ 	"github.com/joho/godotenv"
+ )
+ 
+diff --git a/markdown/ast_code.go b/markdown/ast_code.go
+index 4fa962a..6e8c08e 100644
+--- a/markdown/ast_code.go
++++ b/markdown/ast_code.go
+@@ -5,7 +5,7 @@ import (
+ 	"html"
+ 	"html/template"
+ 
+-	"git.anhgelus.world/anhgelus/small-web/dom"
++	"github.com/Nouveau-Printemps/nouveauprintemps.org/dom"
+ )
+ 
+ var (
+diff --git a/markdown/ast_external.go b/markdown/ast_external.go
+index 87662c3..de4aff2 100644
+--- a/markdown/ast_external.go
++++ b/markdown/ast_external.go
+@@ -4,7 +4,7 @@ import (
+ 	"html/template"
+ 	"regexp"
+ 
+-	"git.anhgelus.world/anhgelus/small-web/dom"
++	"github.com/Nouveau-Printemps/nouveauprintemps.org/dom"
+ )
+ 
+ var ExternalLink = regexp.MustCompile(`https?://`)
+diff --git a/markdown/ast_heading.go b/markdown/ast_heading.go
+index ad19def..5e15685 100644
+--- a/markdown/ast_heading.go
++++ b/markdown/ast_heading.go
+@@ -5,7 +5,7 @@ import (
+ 	"html/template"
+ 	"strings"
+ 
+-	"git.anhgelus.world/anhgelus/small-web/dom"
++	"github.com/Nouveau-Printemps/nouveauprintemps.org/dom"
+ )
+ 
+ var ErrInvalidHeader = errors.New("invalid header")
+diff --git a/markdown/ast_list.go b/markdown/ast_list.go
+index b07f013..3ce99e3 100644
+--- a/markdown/ast_list.go
++++ b/markdown/ast_list.go
+@@ -5,7 +5,7 @@ import (
+ 	"regexp"
+ 	"strings"
+ 
+-	"git.anhgelus.world/anhgelus/small-web/dom"
++	"github.com/Nouveau-Printemps/nouveauprintemps.org/dom"
+ )
+ 
+ var regexOrdered = regexp.MustCompile(`\d+\.`)
+diff --git a/markdown/ast_modifier.go b/markdown/ast_modifier.go
+index 7672c0c..f079176 100644
+--- a/markdown/ast_modifier.go
++++ b/markdown/ast_modifier.go
+@@ -6,7 +6,7 @@ import (
+ 	"fmt"
+ 	"html/template"
+ 
+-	"git.anhgelus.world/anhgelus/small-web/dom"
++	"github.com/Nouveau-Printemps/nouveauprintemps.org/dom"
+ )
+ 
+ var (
+diff --git a/markdown/ast_paragraph.go b/markdown/ast_paragraph.go
+index 30fd4a1..99ce019 100644
+--- a/markdown/ast_paragraph.go
++++ b/markdown/ast_paragraph.go
+@@ -5,7 +5,7 @@ import (
+ 	"html/template"
+ 	"strings"
+ 
+-	"git.anhgelus.world/anhgelus/small-web/dom"
++	"github.com/Nouveau-Printemps/nouveauprintemps.org/dom"
+ )
+ 
+ var (
+diff --git a/markdown/ast_quote.go b/markdown/ast_quote.go
+index 96669c5..59daf5f 100644
+--- a/markdown/ast_quote.go
++++ b/markdown/ast_quote.go
+@@ -4,7 +4,7 @@ import (
+ 	"html/template"
+ 	"strings"
+ 
+-	"git.anhgelus.world/anhgelus/small-web/dom"
++	"github.com/Nouveau-Printemps/nouveauprintemps.org/dom"
+ )
+ 
+ type astQuote struct {
+-- 
+2.51.2
+

@@ -1,5 +1,4 @@
 build
-data
-public
+dev
 *.sqlite
 nouveauprintemps.org
