@@ -17,3 +17,8 @@ clean:
 
 update-dev:
     cd dev && (git add * || echo "ok") && git commit --no-gpg-sign --amend -am "PREVIOUS"
+
+create-patch:
+    cd dev && git diff > NEW_PATCH.patch
+    mv dev/NEW_PATCH.patch . 
+    just update-dev

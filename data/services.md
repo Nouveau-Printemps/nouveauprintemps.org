@@ -5,10 +5,10 @@ description = "Liste des services hébergés par le Nouveau Printemps."
 Nouveau Printemps héberge de nombreux services pour ses membres.
 Ils visent tous à proposer une expérience proche des services grands publics tout en respectant [nos valeurs](/charte).
 
+## Liste
+
 Chaque service appartient à un *axe*.
 Cette catégorisation décrit la raison d'être des services dans un contexte plus général.
-
-## Liste
 
 Souveraineté primaire~:
 - PDS AT Protocol
