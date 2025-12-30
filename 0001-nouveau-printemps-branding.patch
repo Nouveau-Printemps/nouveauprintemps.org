@@ -2,9 +2,9 @@ diff --git a/backend/admin.go b/backend/admin.go
 index 087a3ea..3614e9e 100644
 --- a/backend/admin.go
 +++ b/backend/admin.go
-@@ -5,7 +5,7 @@ import (
- 	"net/http"
- 	"strconv"
+@@ -8,7 +8,7 @@ import (
+ 	"sync"
+ 	"time"
  
 -	"git.anhgelus.world/anhgelus/small-web/backend/storage"
 +	"github.com/Nouveau-Printemps/nouveauprintemps.org/backend/storage"
@@ -51,10 +51,10 @@ index 1a2f024..c0277c6 100644
 +	"github.com/Nouveau-Printemps/nouveauprintemps.org/backend/storage"
  	"github.com/go-chi/chi/v5"
  	"github.com/go-chi/chi/v5/middleware"
- 	"github.com/go-chi/httplog/v3"
-@@ -43,7 +43,7 @@ func SetupLogger(debug bool) {
- 		ReplaceAttr: logFormat.ReplaceAttr,
- 		Level:       logLevel,
+ )
+@@ -39,7 +39,7 @@ func SetupLogger(debug bool) {
+ 	logger := slog.New(slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{
+ 		Level: logLevel,
  	})).With(
 -		slog.String("app", "anhgelus/small-web"),
 +		slog.String("app", "Nouveau-Printemps/nouveauprintemps.org"),
@@ -284,22 +284,24 @@ index 9c84422..1e757fa 100644
 +module github.com/Nouveau-Printemps/nouveauprintemps.org
  
  go 1.25.1
- 
+
 diff --git a/main.go b/main.go
-index b1a192e..f96932b 100644
+index d983ff5..e03752b 100644
 --- a/main.go
 +++ b/main.go
-@@ -14,8 +14,8 @@ import (
+@@ -13,8 +13,8 @@ import (
  	"syscall"
  	"time"
  
 -	"git.anhgelus.world/anhgelus/small-web/backend"
 -	"git.anhgelus.world/anhgelus/small-web/backend/storage"
 +	"github.com/Nouveau-Printemps/nouveauprintemps.org/backend"
-+	"github.com/Nouveau-Printemps/nouveauprintemps.org/backend/storage"
- 	"github.com/joho/godotenv"
++	"github.com/Nouveau-Printemps/nouveauprintemps.org/storage"
  )
  
+ //go:embed dist
+
+
 diff --git a/markdown/ast_code.go b/markdown/ast_code.go
 index 4fa962a..6e8c08e 100644
 --- a/markdown/ast_code.go

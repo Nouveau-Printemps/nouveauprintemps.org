@@ -35,13 +35,13 @@ index c97fa21..64626f1 100644
  }
  
 diff --git a/backend/data.go b/backend/data.go
-index 2f2e06d..f3d3497 100644
+index 3a8acf0..b38d31f 100644
 --- a/backend/data.go
 +++ b/backend/data.go
-@@ -9,7 +9,6 @@ import (
+@@ -8,7 +8,6 @@ import (
+ 	"html/template"
  	"io"
  	"io/fs"
- 	"log/slog"
 -	"math/rand"
  	"net/http"
  	"regexp"
