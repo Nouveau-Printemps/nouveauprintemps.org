@@ -26,7 +26,8 @@ Ces sites ne collectent aucune information personnelle à part les informations 
 permettant l'envoie de cette page (à votre adresse IP) en vertu de l'Article 5(3) de la directive du 12 juillet 2002
 sur la protection de la vie privée dans le secteur des communications électroniques.
 
-Nous ne stockons aucune donnée personnelle.
+Nous gardons votre adresse IP pendant un maximum de 3 heures à compter de votre dernière requête pour nous protéger
+contre les tentatives de brute force.
 
 Vous pouvez accéder, modifier, rectifier, supprimer, restreindre le traitement et exporter vos données en envoyant un
 mail à [contact@nouveauprintemps.org](mailto:contact@nouveauprintemps.org).
