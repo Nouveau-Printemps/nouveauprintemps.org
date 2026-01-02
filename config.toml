@@ -6,7 +6,6 @@ language = 'fr'
 root_folder = 'data'
 public_folder = 'public'
 database = "database.sqlite"
-admin_password = "admin"
 home_content = "home"
 
 [logo]

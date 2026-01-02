@@ -296,7 +296,7 @@ index d983ff5..e03752b 100644
 -	"git.anhgelus.world/anhgelus/small-web/backend"
 -	"git.anhgelus.world/anhgelus/small-web/backend/storage"
 +	"github.com/Nouveau-Printemps/nouveauprintemps.org/backend"
-+	"github.com/Nouveau-Printemps/nouveauprintemps.org/storage"
++	"github.com/Nouveau-Printemps/nouveauprintemps.org/backend/storage"
  )
  
  //go:embed dist
