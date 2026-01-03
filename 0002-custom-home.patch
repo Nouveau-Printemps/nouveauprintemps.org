@@ -10,7 +10,7 @@ index 6052e4b..c97fa21 100644
  
  	Sections []Section `toml:"section"`
  
-@@ -77,6 +78,7 @@ func (c *Config) DefaultValues() {
+@@ -78,6 +79,7 @@ func (c *Config) DefaultValues() {
  	c.PublicFolder = "public"
  	c.Database = "database.sqlite"
  	c.AdminPassword = "Ch@ngeM€Please!"

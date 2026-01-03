@@ -1,0 +1,69 @@
+# Default behavior
+User-agent: *
+Content-Signal: ai-train=no, search=yes, ai-input=yes # created by Cloudflare, may be useless
+Allow: /
+
+# Blocking admin page and assets
+User-agent: *
+Disallow: /admin
+Disallow: /assets
+
+# OpenAI
+User-agent: GPTBot
+User-agent: ChatGPT-User
+Disallow: /
+
+# Google
+User-agent: Google-Extended
+Disallow: /
+
+# CCBot
+User-agent: CCBot
+Disallow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Disallow: /
+
+# Anthropic
+User-agent: anthropic-ai
+User-agent: Claude-Web
+User-agent: ClaudeBot
+Disallow: /
+
+# Amazon
+User-agent: Amazonbot
+Disallow: /
+
+# Omgili search engine
+# I don't know if I must block it
+#User-agent: Omgili
+#User-agent: Omgilibot
+#Disallow: /
+
+# Meta
+User-agent: FacebookBot
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+# Apple
+User-agent: Applebot-Extended
+Disallow: /
+
+
+# ByteDance (TikTok)
+User-agent: Bytespider
+Disallow: /
+
+# Diffbot, another AI bullshit startup
+User-agent: Diffbot
+Disallow: /
+
+# ImagesiftBot search engine
+# I don't know if I must block it
+#User-agent: ImagesiftBot
+#Disallow: /
+
+# Marketing slop getting as much data as possible
+User-agent: YouBot
+Disallow: /

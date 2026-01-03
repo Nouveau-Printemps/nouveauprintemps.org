@@ -26,7 +26,7 @@ index c97fa21..64626f1 100644
  
  	Sections []Section `toml:"section"`
  
-@@ -79,7 +78,6 @@ func (c *Config) DefaultValues() {
+@@ -78,7 +79,6 @@ func (c *Config) DefaultValues() {
  	c.Database = "database.sqlite"
  	c.AdminPassword = "Ch@ngeM€Please!"
  	c.HomeContent = "home"
@@ -46,7 +46,7 @@ index 3a8acf0..b38d31f 100644
  	"net/http"
  	"regexp"
  	"strings"
-@@ -34,7 +33,6 @@ type data struct {
+@@ -33,7 +34,6 @@ type data struct {
  	Name            string
  	Links           []Link
  	Logo            *Logo
