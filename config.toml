@@ -14,6 +14,7 @@ favicon = 'logo.svg'
 
 [[section]]
 name = 'Blog'
+title_name = 'blog'
 folder = 'data/blog'
 description = "Actualités, réflexions et informations généralistes du Nouveau Printemps." 
 uri = 'blog'
