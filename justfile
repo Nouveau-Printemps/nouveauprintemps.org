@@ -8,7 +8,7 @@ dev: clean
 build: clean
     git clone https://git.anhgelus.world/anhgelus/small-web.git build
     cd build && bun i && git apply ../*.patch && just build
-    cp build/nouveauprintemps.org .
+    cp build/small-web nouveauprintemps.org
     rm -fr build
 
 clean:
